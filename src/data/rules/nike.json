@@ -82,16 +82,16 @@
    "source": "Exclusions: After Dark marathon tickets"
   },
   {
-   "id": "purchases-made-through-the-nike-snkrs-app-or-referenced-on-nike-com-launch-as-only-available-in-the-snkrs-app",
-   "label": "Purchases made through the Nike SNKRS App or referenced on nike.com/launch as only available in the SNKRS app",
+   "id": "snkrs-app-only-purchases",
+   "label": "SNKRS App-only purchases",
    "match": {
     "flagsAll": [
      "snkrsOnly"
     ]
    },
    "scope": "item",
-   "reason": "T&C: Cash Back is not available on Purchases made through the Nike SNKRS App or referenced on nike.com/launch as only available in the SNKRS app.",
-   "source": "Exclusions: Purchases made through the Nike SNKRS App or referenced on nike.com/launch as only available in the SNKRS app"
+   "reason": "T&C: Cash Back is not available on purchases made through the Nike SNKRS App or referenced on nike.com/launch as only available in the SNKRS app.",
+   "source": "Exclusions: purchases made through the Nike SNKRS App or referenced on nike.com/launch as only available in the SNKRS app"
   },
   {
    "id": "purchases-paid-for-with-gift-cards",
