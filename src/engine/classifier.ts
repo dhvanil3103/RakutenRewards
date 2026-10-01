@@ -36,6 +36,21 @@ export class MockClassifier implements Classifier {
   }
 }
 
+const INSTRUCTIONS =
+  "A shopper is viewing a product on a merchant site. Decide which cash back category from the merchant's Terms & Conditions the product belongs to. " +
+  "The product's breadcrumb is often missing or generic (e.g. Deals) and its flags are not available, so decide mainly from the product title and brand, " +
+  "using general knowledge of what the product is. Each option is a T&C line and says what it means for cash back. " +
+  "Pick the option whose wording the product most plainly falls under. An exclusion option means the product earns no cash back. " +
+  "Choose the 'default' option only when no specific option fits, and 'not eligible' only when the product clearly cannot earn cash back.";
+
+/** Option description for Jev: the T&C wording plus what choosing it means. */
+function describe(c: Candidate): string {
+  if (c.id === DEFAULT_ID) return `Default: ${c.label}. None of the more specific lines fit; ordinary products at this merchant earn this rate.`;
+  if (c.id === EXCLUDED_ID) return "Not eligible: the product clearly fits none of the listed categories and cannot earn cash back.";
+  if ("rate" in c) return `${c.label}: earns ${c.rate}% cash back. T&C line: "${c.source}".`;
+  return `Excluded: ${c.label}. The product earns NO cash back. T&C: "${c.source}".`;
+}
+
 /**
  * TypeSafe Jev ("System One") adapter. Request shape taken from https://docs.typesafe.ai/api.md
  * and /primitives/choice.md: POST /v1/systemone, Bearer auth, { state, model, questions }
@@ -60,8 +75,7 @@ export class JevAdapter implements Classifier {
     }
     try {
       const criteria: Record<string, string> = {};
-      for (const c of candidates) criteria[c.id] = c.id === EXCLUDED_ID || c.id === DEFAULT_ID ? c.label : `${c.label} (${c.source})`;
-      // Direct calls need the key here (and the API blocks browser origins); via a proxy the server adds it.
+      for (const c of candidates) criteria[c.id] = describe(c);
       const res = await fetch(this.opts.url ?? "https://api.typesafe.ai/v1/systemone", {
         method: "POST",
         headers: { ...(apiKey ? { Authorization: `Bearer ${apiKey}` } : {}), "Content-Type": "application/json" },
@@ -71,7 +85,7 @@ export class JevAdapter implements Classifier {
           questions: {
             category: {
               type: "choice",
-              instructions: "Which cash back category from the merchant's terms does this product belong to?",
+              instructions: INSTRUCTIONS,
               criteria,
             },
           },

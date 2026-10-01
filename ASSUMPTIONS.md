@@ -33,6 +33,7 @@ Choices made where the brief was ambiguous.
 - Request shape from the TypeSafe docs (`POST https://api.typesafe.ai/v1/systemone`, Bearer auth, body `{ state, model, questions }`, one `choice` question with `criteria`, answer's `probabilities`). Verified with a real call: HTTP 200, model `jev-latest` accepted, option ids like `__default__` accepted, about 400 ms.
 - The API does not allow browser-origin (CORS) requests, so the app calls it through a Vite dev-server proxy (`/api/jev`, see `vite.config.ts`) that adds the key from `VITE_JEV_API_KEY` server-side. Client code never references the key, so it is not bundled. This only works under `npm run dev`; a production deployment needs a real backend proxy.
 - On any failure (no key, proxy missing, API error) it falls back to the mock, and the debug panel shows a warning.
+- The Jev question carries task instructions (decide from title and brand, since breadcrumb and flags are missing) and each option's description includes the T&C wording and what it means (earns X%, or earns no cash back). With bare labels Jev disagreed with the mock on 3 of 14 Nike leftovers (no flags set); with this context it agrees on all 14.
 - Only the `choice` primitive is used. I did not use the JS SDK (`@typesafe-ai/sdk`), `confidence`, Noul or Score.
 - The LLM adapter is a stub (TODO) that falls back to the mock.
 
