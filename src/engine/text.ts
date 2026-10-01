@@ -30,6 +30,9 @@ export function isWeakSignal(breadcrumb: string[]): boolean {
   return breadcrumb.every((seg) => GENERIC_PATH.has(seg.toLowerCase().trim()));
 }
 
+// Generic breadcrumb words ("Deals", "Sale") say nothing about the category, so they never count as overlap.
+const GENERIC_TOKENS = new Set([...GENERIC_PATH].flatMap(tokenize));
+
 export function keywordsOf(c: Candidate): Set<string> {
   const parts = [c.label];
   const m = c.match;
@@ -41,5 +44,5 @@ export function keywordsOf(c: Candidate): Set<string> {
 export function overlapScore(item: Item, c: Candidate): number {
   const kw = keywordsOf(c);
   const hit = (tokens: string[]) => new Set(tokens.filter((t) => kw.has(t))).size;
-  return 3 * hit(tokenize(item.brand)) + 1.5 * hit(tokenize(item.title)) + 1 * hit(item.breadcrumb.flatMap(tokenize));
+  return 3 * hit(tokenize(item.brand)) + 1.5 * hit(tokenize(item.title)) + 1 * hit(item.breadcrumb.flatMap(tokenize).filter((t) => !GENERIC_TOKENS.has(t)));
 }

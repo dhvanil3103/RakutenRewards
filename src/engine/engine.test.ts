@@ -121,6 +121,20 @@ describe("cart order rules", () => {
   });
 });
 
+describe("weak signal is never skipped", () => {
+  it("sends the full option list when no rule label overlaps the item", () => {
+    const it = item({ merchant: "bestbuy", title: "Zorblax Quantum Widget", brand: "Zorblax", breadcrumb: ["Deals"] });
+    const out = evaluateRules(it, RULES.bestbuy);
+    expect(out.needsClassifier?.reason).toBe("weak_signal");
+    expect(out.needsClassifier!.candidates.length).toBeGreaterThan(RULES.bestbuy.rateRows.length);
+  });
+  it("a generic breadcrumb word is not evidence (Deals does not match Top Deals)", () => {
+    const it = item({ merchant: "bestbuy", title: "Zorblax Quantum Widget", brand: "Zorblax", breadcrumb: ["Deals"] });
+    const ids = evaluateRules(it, RULES.bestbuy).needsClassifier!.candidates.map((c) => c.id);
+    expect(ids.length).toBeGreaterThan(50);
+  });
+});
+
 describe("resolver cost control", () => {
   it("memoizes: an item is evaluated once", async () => {
     const r = new Resolver(RULES, new MockClassifier());

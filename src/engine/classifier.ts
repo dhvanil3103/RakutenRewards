@@ -26,6 +26,9 @@ export class MockClassifier implements Classifier {
   constructor(private temperature = 1) {}
 
   async classify(item: Item, candidates: Candidate[]) {
+    // Options with no word overlap carry no evidence; leaving them out keeps the softmax from diluting the priors.
+    const synthetic = (c: Candidate) => c.id === DEFAULT_ID || c.id === EXCLUDED_ID;
+    candidates = candidates.filter((c) => synthetic(c) || overlapScore(item, c) > 0);
     const scores = candidates.map((c) =>
       c.id === DEFAULT_ID ? DEFAULT_BASE : c.id === EXCLUDED_ID ? EXCLUDED_BASE : overlapScore(item, c),
     );

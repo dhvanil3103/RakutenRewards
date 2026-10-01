@@ -8,7 +8,6 @@ export const amountFor = (price: number, qty: number, rate: number) => round2((p
 
 const CONFLICT_CAP = 0.6;
 const TIE_CAP = 0.6;
-const WEAK_CAP = 0.6;
 
 export function defaultCandidate(rules: MerchantRules): RateRow | null {
   const d = rules.defaultRate;
@@ -103,27 +102,18 @@ export function evaluateRules(item: Item, rules: MerchantRules, quantity = 1): R
   }
 
   // Classifier tier, only for leftovers: weak category signal, or a real tie at the top.
+  // A weak-signal item is never skipped: if no rule label shares words with it, the classifier gets every option.
   if (isWeakSignal(item.breadcrumb)) {
     const pool: Candidate[] = [...rules.rateRows, ...rules.exclusions.filter((e) => e.scope === "item")];
-    const candidates = pool
+    const ranked = pool
       .map((c) => ({ c, s: overlapScore(item, c) }))
       .filter((x) => x.s > 0)
       .sort((a, b) => b.s - a.s)
       .slice(0, 8)
       .map((x) => x.c);
-    if (candidates.length > 0) {
-      const d = defaultCandidate(rules);
-      return { result, needsClassifier: { reason: "weak_signal", candidates: [...candidates, ...(d ? [d] : []), excludedCandidate()] } };
-    }
-    // Nothing to ask the classifier about: keep the rule/default answer but flag the weak signal.
-    return {
-      result: {
-        ...result,
-        confidence: Math.min(result.confidence, WEAK_CAP),
-        reason: `Weak category signal (breadcrumb "${item.breadcrumb.join(" > ") || "missing"}"). ${result.reason}`,
-      },
-      needsClassifier: null,
-    };
+    const candidates = ranked.length > 0 ? ranked : pool;
+    const d = defaultCandidate(rules);
+    return { result, needsClassifier: { reason: "weak_signal", candidates: [...candidates, ...(d ? [d] : []), excludedCandidate()] } };
   }
   if (tied && !ex) {
     return { result, needsClassifier: { reason: "tie", candidates: [...topRows.map((x) => x.r), excludedCandidate()] } };
