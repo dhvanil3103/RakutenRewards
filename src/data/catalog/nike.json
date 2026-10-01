@@ -1,0 +1,573 @@
+[
+ {
+  "id": "nk-airmax90",
+  "merchant": "nike",
+  "title": "Nike Air Max 90",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Shoes",
+   "Lifestyle"
+  ],
+  "price": 130,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-pegasus41",
+  "merchant": "nike",
+  "title": "Nike Pegasus 41 Road Running Shoes",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Shoes",
+   "Running"
+  ],
+  "price": 140,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-dunk-low",
+  "merchant": "nike",
+  "title": "Nike Dunk Low Retro",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Shoes",
+   "Lifestyle"
+  ],
+  "price": 115,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-vomero",
+  "merchant": "nike",
+  "title": "Nike Vomero 18 Women's Running Shoes",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Women",
+   "Shoes",
+   "Running"
+  ],
+  "price": 150,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-af1",
+  "merchant": "nike",
+  "title": "Nike Air Force 1 '07",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Women",
+   "Shoes",
+   "Lifestyle"
+  ],
+  "price": 115,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-tech-hoodie",
+  "merchant": "nike",
+  "title": "Nike Tech Fleece Full-Zip Hoodie",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Hoodies"
+  ],
+  "price": 125,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-dri-fit-tee",
+  "merchant": "nike",
+  "title": "Nike Dri-FIT Training T-Shirt",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Tops"
+  ],
+  "price": 35,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-leggings",
+  "merchant": "nike",
+  "title": "Nike One High-Waisted Leggings",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Women",
+   "Clothing",
+   "Leggings"
+  ],
+  "price": 60,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-sports-bra",
+  "merchant": "nike",
+  "title": "Nike Swoosh Medium-Support Sports Bra",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Women",
+   "Clothing",
+   "Sports Bras"
+  ],
+  "price": 45,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-club-cap",
+  "merchant": "nike",
+  "title": "Nike Club Unstructured Cap",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Accessories",
+   "Hats"
+  ],
+  "price": 28,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-backpack",
+  "merchant": "nike",
+  "title": "Nike Brasilia 9.5 Training Backpack",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Accessories",
+   "Bags"
+  ],
+  "price": 45,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-socks",
+  "merchant": "nike",
+  "title": "Nike Everyday Cushioned Socks (6 Pairs)",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Accessories",
+   "Socks"
+  ],
+  "price": 28,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-kids-sneaker",
+  "merchant": "nike",
+  "title": "Nike Revolution 7 Little Kids' Shoes",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Kids",
+   "Shoes",
+   "Running"
+  ],
+  "price": 60,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-kids-tee",
+  "merchant": "nike",
+  "title": "Nike Sportswear Kids' Cotton Tee",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Kids",
+   "Clothing",
+   "Tops"
+  ],
+  "price": 25,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-shorts",
+  "merchant": "nike",
+  "title": "Nike Challenger Dri-FIT Running Shorts",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Shorts"
+  ],
+  "price": 45,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-windrunner",
+  "merchant": "nike",
+  "title": "Nike Windrunner Hooded Jacket",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Jackets"
+  ],
+  "price": 110,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-yoga-mat",
+  "merchant": "nike",
+  "title": "Nike Yoga Mat 4mm",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Accessories",
+   "Training Gear"
+  ],
+  "price": 40,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-water-bottle",
+  "merchant": "nike",
+  "title": "Nike Hyperfuel Water Bottle 24oz",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Accessories",
+   "Training Gear"
+  ],
+  "price": 22,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-jordan-tee",
+  "merchant": "nike",
+  "title": "Jordan Flight Essentials Tee",
+  "brand": "Jordan",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Tops"
+  ],
+  "price": 38,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-jordan-hoodie",
+  "merchant": "nike",
+  "title": "Jordan Brooklyn Fleece Hoodie",
+  "brand": "Jordan",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Hoodies"
+  ],
+  "price": 85,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-jordan-select",
+  "merchant": "nike",
+  "title": "Air Jordan 1 Retro High OG",
+  "brand": "Jordan",
+  "breadcrumb": [
+   "Men",
+   "Shoes",
+   "Jordan"
+  ],
+  "price": 180,
+  "seller": "merchant",
+  "flags": [
+   "selectJordan"
+  ]
+ },
+ {
+  "id": "nk-jordan-select-2",
+  "merchant": "nike",
+  "title": "Air Jordan 4 Retro Military Blue",
+  "brand": "Jordan",
+  "breadcrumb": [
+   "Men",
+   "Shoes",
+   "Jordan"
+  ],
+  "price": 215,
+  "seller": "merchant",
+  "flags": [
+   "selectJordan"
+  ]
+ },
+ {
+  "id": "nk-airmax-dn8",
+  "merchant": "nike",
+  "title": "Nike Air Max Dn8",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Shoes",
+   "New & Featured"
+  ],
+  "price": 160,
+  "seller": "merchant",
+  "flags": [
+   "newRelease"
+  ]
+ },
+ {
+  "id": "nk-pegasus-plus-new",
+  "merchant": "nike",
+  "title": "Nike Pegasus Plus (New Release)",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Women",
+   "Shoes",
+   "New & Featured"
+  ],
+  "price": 180,
+  "seller": "merchant",
+  "flags": [
+   "newRelease"
+  ]
+ },
+ {
+  "id": "nk-hyperice-legs",
+  "merchant": "nike",
+  "title": "HyperIce Normatec 3 Legs",
+  "brand": "HyperIce",
+  "breadcrumb": [
+   "Recovery",
+   "Compression"
+  ],
+  "price": 799,
+  "seller": "merchant",
+  "flags": [
+   "hyperIce"
+  ]
+ },
+ {
+  "id": "nk-hyperice-roller",
+  "merchant": "nike",
+  "title": "HyperIce Vyper Go Vibrating Roller",
+  "brand": "HyperIce",
+  "breadcrumb": [
+   "Recovery",
+   "Rollers"
+  ],
+  "price": 129,
+  "seller": "merchant",
+  "flags": [
+   "hyperIce"
+  ]
+ },
+ {
+  "id": "nk-af1-refurb",
+  "merchant": "nike",
+  "title": "Nike Air Force 1 Low (Refurbished)",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Shoes",
+   "Refurbished"
+  ],
+  "price": 75,
+  "seller": "merchant",
+  "flags": [
+   "refurbished"
+  ]
+ },
+ {
+  "id": "nk-dunk-snkrs",
+  "merchant": "nike",
+  "title": "Nike Dunk Low SNKRS Exclusive",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Shoes",
+   "SNKRS"
+  ],
+  "price": 125,
+  "seller": "merchant",
+  "flags": [
+   "snkrsOnly"
+  ]
+ },
+ {
+  "id": "nk-giftcard",
+  "merchant": "nike",
+  "title": "Nike Gift Card $50",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Gift Cards",
+   "Digital"
+  ],
+  "price": 50,
+  "seller": "merchant",
+  "flags": [
+   "giftCard"
+  ]
+ },
+ {
+  "id": "nk-giftcard-100",
+  "merchant": "nike",
+  "title": "Nike Gift Card $100",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Gift Cards",
+   "Digital"
+  ],
+  "price": 100,
+  "seller": "merchant",
+  "flags": [
+   "giftCard"
+  ]
+ },
+ {
+  "id": "nk-marathon-ticket",
+  "merchant": "nike",
+  "title": "After Dark Marathon Entry Ticket",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Events",
+   "Race Tickets"
+  ],
+  "price": 95,
+  "seller": "merchant",
+  "flags": [
+   "marathonTicket"
+  ]
+ },
+ {
+  "id": "nk-trail-shoe",
+  "merchant": "nike",
+  "title": "Nike Pegasus Trail 5",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Shoes",
+   "Trail Running"
+  ],
+  "price": 145,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-windbreaker-w",
+  "merchant": "nike",
+  "title": "Nike Sportswear Essential Windbreaker",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Women",
+   "Clothing",
+   "Jackets"
+  ],
+  "price": 100,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-polo",
+  "merchant": "nike",
+  "title": "Nike Dri-FIT Victory Golf Polo",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Golf"
+  ],
+  "price": 70,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-gym-sack",
+  "merchant": "nike",
+  "title": "Nike Heritage Drawstring Bag",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Accessories",
+   "Bags"
+  ],
+  "price": 20,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-messy-pegasus",
+  "merchant": "nike",
+  "title": "Nike Pegasus 41 Running Shoes",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Featured"
+  ],
+  "price": 140,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-messy-jordan4",
+  "merchant": "nike",
+  "title": "Air Jordan 4 Retro",
+  "brand": "Jordan",
+  "breadcrumb": [
+   "New"
+  ],
+  "price": 210,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-messy-hypervolt",
+  "merchant": "nike",
+  "title": "HyperIce Hypervolt Go 2 Massage Gun",
+  "brand": "HyperIce",
+  "breadcrumb": [
+   "Deals"
+  ],
+  "price": 129,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-messy-newrelease",
+  "merchant": "nike",
+  "title": "Nike Air Max Dn New Release",
+  "brand": "Nike",
+  "breadcrumb": [],
+  "price": 150,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-messy-gift",
+  "merchant": "nike",
+  "title": "Nike Gift Card Holiday Edition",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Deals"
+  ],
+  "price": 75,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "nk-messy-vomero",
+  "merchant": "nike",
+  "title": "Nike Vomero Premium",
+  "brand": "Nike",
+  "breadcrumb": [
+   "Deals"
+  ],
+  "price": 190,
+  "seller": "merchant",
+  "flags": []
+ }
+]

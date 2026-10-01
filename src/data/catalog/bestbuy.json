@@ -1,0 +1,665 @@
+[
+ {
+  "id": "bb-ninja-airfryer",
+  "merchant": "bestbuy",
+  "title": "Ninja 6-Qt Air Fryer Pro",
+  "brand": "Ninja",
+  "breadcrumb": [
+   "Appliances",
+   "Small Appliances",
+   "Air Fryers"
+  ],
+  "price": 129.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-ninja-blender",
+  "merchant": "bestbuy",
+  "title": "Ninja Professional Blender 1000W",
+  "brand": "Ninja",
+  "breadcrumb": [
+   "Appliances",
+   "Small Appliances",
+   "Blenders"
+  ],
+  "price": 89.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-shark-vacuum",
+  "merchant": "bestbuy",
+  "title": "Shark Navigator Upright Vacuum",
+  "brand": "Shark",
+  "breadcrumb": [
+   "Appliances",
+   "Vacuums & Floor Care",
+   "Upright Vacuums"
+  ],
+  "price": 199.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-shark-hairdryer",
+  "merchant": "bestbuy",
+  "title": "Shark Wellness Smart Hair Dryer",
+  "brand": "Shark",
+  "breadcrumb": [
+   "Health, Wellness & Fitness",
+   "Personal Care",
+   "Hair Care"
+  ],
+  "price": 179.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-sony-headphones",
+  "merchant": "bestbuy",
+  "title": "Sony WH-1000XM5 Noise Canceling Headphones",
+  "brand": "Sony",
+  "breadcrumb": [
+   "Audio",
+   "Headphones",
+   "Over-Ear Headphones"
+  ],
+  "price": 399.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-bose-headphones",
+  "merchant": "bestbuy",
+  "title": "Bose QuietComfort Ultra Headphones",
+  "brand": "Bose",
+  "breadcrumb": [
+   "Audio",
+   "Headphones",
+   "Over-Ear Headphones"
+  ],
+  "price": 429,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-jlab-earbuds",
+  "merchant": "bestbuy",
+  "title": "JLab Go Air Pop True Wireless Earbuds",
+  "brand": "JLab",
+  "breadcrumb": [
+   "Audio",
+   "Headphones",
+   "True Wireless Earbuds"
+  ],
+  "price": 24.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-airpods",
+  "merchant": "bestbuy",
+  "title": "Apple AirPods Pro (2nd Gen)",
+  "brand": "Apple",
+  "breadcrumb": [
+   "Audio",
+   "Headphones",
+   "True Wireless Earbuds"
+  ],
+  "price": 249.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-beats-studio",
+  "merchant": "bestbuy",
+  "title": "Beats Studio Pro Wireless Headphones",
+  "brand": "Beats",
+  "breadcrumb": [
+   "Audio",
+   "Headphones",
+   "Over-Ear Headphones"
+  ],
+  "price": 349.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-soundcore-headphones",
+  "merchant": "bestbuy",
+  "title": "Soundcore Space One Headphones",
+  "brand": "Anker",
+  "breadcrumb": [
+   "Audio",
+   "Headphones",
+   "Over-Ear Headphones"
+  ],
+  "price": 99.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-hp-printer",
+  "merchant": "bestbuy",
+  "title": "HP OfficeJet Pro 9125e All-in-One Printer",
+  "brand": "HP",
+  "breadcrumb": [
+   "Computers & Tablets",
+   "Printers & Scanners",
+   "Inkjet Printers"
+  ],
+  "price": 229.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-epson-printer",
+  "merchant": "bestbuy",
+  "title": "Epson EcoTank ET-2850 Printer",
+  "brand": "Epson",
+  "breadcrumb": [
+   "Computers & Tablets",
+   "Printers & Scanners",
+   "Ink Tank Printers"
+  ],
+  "price": 279.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-ge-oven",
+  "merchant": "bestbuy",
+  "title": "GE Profile 30in Electric Wall Oven",
+  "brand": "GE Profile",
+  "breadcrumb": [
+   "Appliances",
+   "Ranges, Cooktops & Ovens",
+   "Wall Ovens"
+  ],
+  "price": 1799,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-ge-freezer",
+  "merchant": "bestbuy",
+  "title": "GE 7 cu ft Chest Freezer",
+  "brand": "GE",
+  "breadcrumb": [
+   "Refrigerators & Freezers",
+   "Freezers & Ice Makers"
+  ],
+  "price": 549,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-kitchenaid-mixer",
+  "merchant": "bestbuy",
+  "title": "KitchenAid Artisan Stand Mixer",
+  "brand": "Kitchenaid",
+  "breadcrumb": [
+   "Appliances",
+   "Small Appliances",
+   "Stand Mixers"
+  ],
+  "price": 449.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-hisense-tv",
+  "merchant": "bestbuy",
+  "title": "Hisense 55-inch U6 Series ULED 4K TV",
+  "brand": "Hisense",
+  "breadcrumb": [
+   "TV & Home Theater",
+   "TVs",
+   "4K TVs"
+  ],
+  "price": 399.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-sony-tv",
+  "merchant": "bestbuy",
+  "title": "Sony BRAVIA 65-inch XR 4K TV",
+  "brand": "Sony",
+  "breadcrumb": [
+   "TV & Home Theater",
+   "TVs",
+   "4K TVs"
+  ],
+  "price": 1199.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-samsung-tv",
+  "merchant": "bestbuy",
+  "title": "Samsung 55-inch Crystal UHD TV",
+  "brand": "Samsung",
+  "breadcrumb": [
+   "TV & Home Theater",
+   "TVs",
+   "4K TVs"
+  ],
+  "price": 479.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-lg-tv",
+  "merchant": "bestbuy",
+  "title": "LG 50-inch UR9000 4K TV",
+  "brand": "LG",
+  "breadcrumb": [
+   "TV & Home Theater",
+   "TVs",
+   "4K TVs"
+  ],
+  "price": 349.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-roku-tv",
+  "merchant": "bestbuy",
+  "title": "Roku Select Series 43-inch 4K TV",
+  "brand": "Roku",
+  "breadcrumb": [
+   "TV & Home Theater",
+   "TVs",
+   "4K TVs"
+  ],
+  "price": 229.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-insignia-tv",
+  "merchant": "bestbuy",
+  "title": "Insignia 24-inch HD Smart TV",
+  "brand": "Insignia",
+  "breadcrumb": [
+   "TV & Home Theater",
+   "TVs",
+   "HD TVs"
+  ],
+  "price": 119.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-mariokart",
+  "merchant": "bestbuy",
+  "title": "Mario Kart World (Nintendo Switch 2)",
+  "brand": "Nintendo",
+  "breadcrumb": [
+   "Video Games",
+   "Nintendo Switch 2",
+   "Games"
+  ],
+  "price": 79.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-zelda-digital",
+  "merchant": "bestbuy",
+  "title": "Zelda Adventure (Digital Download Code)",
+  "brand": "Nintendo",
+  "breadcrumb": [
+   "Video Games",
+   "Nintendo Switch",
+   "Games"
+  ],
+  "price": 59.99,
+  "seller": "merchant",
+  "flags": [
+   "digitalDownload"
+  ]
+ },
+ {
+  "id": "bb-switch-console",
+  "merchant": "bestbuy",
+  "title": "Nintendo Switch 2 Console",
+  "brand": "Nintendo",
+  "breadcrumb": [
+   "Gaming",
+   "Video Game Consoles",
+   "Nintendo Switch"
+  ],
+  "price": 449.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-ps5pro",
+  "merchant": "bestbuy",
+  "title": "PlayStation 5 Pro Console",
+  "brand": "Sony",
+  "breadcrumb": [
+   "Gaming",
+   "Video Game Consoles",
+   "PlayStation 5"
+  ],
+  "price": 699.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-steelseries-headset",
+  "merchant": "bestbuy",
+  "title": "SteelSeries Arctis Nova 7 Gaming Headset",
+  "brand": "SteelSeries",
+  "breadcrumb": [
+   "Gaming",
+   "PC Gaming",
+   "Gaming Headsets"
+  ],
+  "price": 149.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-ring-doorbell",
+  "merchant": "bestbuy",
+  "title": "Ring Battery Video Doorbell",
+  "brand": "Ring",
+  "breadcrumb": [
+   "Smart Home",
+   "Security & Monitoring",
+   "Video Doorbells"
+  ],
+  "price": 99.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-blink-camera",
+  "merchant": "bestbuy",
+  "title": "Blink Outdoor 4 Wireless Camera",
+  "brand": "Blink",
+  "breadcrumb": [
+   "Smart Home",
+   "Security & Monitoring",
+   "Security Cameras"
+  ],
+  "price": 79.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-tplink-router",
+  "merchant": "bestbuy",
+  "title": "TP-Link Archer AX55 Wi-Fi 6 Router",
+  "brand": "TP-Link",
+  "breadcrumb": [
+   "Computers & Tablets",
+   "Networking",
+   "Wi-Fi Routers"
+  ],
+  "price": 99.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-giftcard",
+  "merchant": "bestbuy",
+  "title": "Best Buy Digital Gift Card $50",
+  "brand": "Best Buy",
+  "breadcrumb": [
+   "Gift Cards",
+   "Digital Gift Cards"
+  ],
+  "price": 50,
+  "seller": "merchant",
+  "flags": [
+   "giftCard"
+  ]
+ },
+ {
+  "id": "bb-visa-posa",
+  "merchant": "bestbuy",
+  "title": "Visa Prepaid Card $100 (activation required)",
+  "brand": "Visa",
+  "breadcrumb": [
+   "Gift Cards",
+   "Prepaid Cards"
+  ],
+  "price": 105,
+  "seller": "merchant",
+  "flags": [
+   "pos_activation"
+  ]
+ },
+ {
+  "id": "bb-motorola-phone",
+  "merchant": "bestbuy",
+  "title": "Motorola Moto G Power 5G Unlocked",
+  "brand": "Motorola",
+  "breadcrumb": [
+   "Cell Phones",
+   "Unlocked Phones"
+  ],
+  "price": 299.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-samsung-phone",
+  "merchant": "bestbuy",
+  "title": "Samsung Galaxy S25 Unlocked",
+  "brand": "Samsung",
+  "breadcrumb": [
+   "Cell Phones",
+   "Unlocked Phones"
+  ],
+  "price": 799.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-iphone",
+  "merchant": "bestbuy",
+  "title": "Apple iPhone 16 128GB Unlocked",
+  "brand": "Apple",
+  "breadcrumb": [
+   "Cell Phones",
+   "Unlocked iPhones"
+  ],
+  "price": 799,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-tp-apple-keyboard",
+  "merchant": "bestbuy",
+  "title": "Apple Magic Keyboard (Marketplace seller)",
+  "brand": "Apple",
+  "breadcrumb": [
+   "Computer Accessories",
+   "Keyboards"
+  ],
+  "price": 99,
+  "seller": "third_party",
+  "flags": []
+ },
+ {
+  "id": "bb-tp-select-lamp",
+  "merchant": "bestbuy",
+  "title": "LED Desk Lamp, Marketplace Select",
+  "brand": "Lumina",
+  "breadcrumb": [
+   "Home, Furniture & Office",
+   "Lighting"
+  ],
+  "price": 39.99,
+  "seller": "third_party",
+  "flags": [
+   "selectThirdParty"
+  ]
+ },
+ {
+  "id": "bb-macbook",
+  "merchant": "bestbuy",
+  "title": "Apple MacBook Air 13-inch M3",
+  "brand": "Apple",
+  "breadcrumb": [
+   "Computers & Tablets",
+   "Laptops",
+   "MacBooks"
+  ],
+  "price": 1099,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-dell-laptop",
+  "merchant": "bestbuy",
+  "title": "Dell Inspiron 15 Laptop",
+  "brand": "Dell",
+  "breadcrumb": [
+   "Computers & Tablets",
+   "Laptops",
+   "Windows Laptops"
+  ],
+  "price": 649.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-hp-laptop",
+  "merchant": "bestbuy",
+  "title": "HP Pavilion 15 Laptop",
+  "brand": "HP",
+  "breadcrumb": [
+   "Computers & Tablets",
+   "Laptops",
+   "Windows Laptops"
+  ],
+  "price": 549.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-lenovo-chromebook",
+  "merchant": "bestbuy",
+  "title": "Lenovo IdeaPad Slim 3 Chromebook",
+  "brand": "Lenovo",
+  "breadcrumb": [
+   "Computers & Tablets",
+   "Chromebooks"
+  ],
+  "price": 279.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-lenovo-thinkpad",
+  "merchant": "bestbuy",
+  "title": "Lenovo ThinkPad E14 Laptop",
+  "brand": "Lenovo",
+  "breadcrumb": [
+   "Computers & Tablets",
+   "Laptops",
+   "Business Laptops"
+  ],
+  "price": 899.99,
+  "seller": "merchant",
+  "flags": [
+   "selectLenovo"
+  ]
+ },
+ {
+  "id": "bb-epson-projector",
+  "merchant": "bestbuy",
+  "title": "Epson Home Cinema 2350 Projector",
+  "brand": "Epson",
+  "breadcrumb": [
+   "TV & Home Theater",
+   "Projectors & Screens",
+   "Projectors"
+  ],
+  "price": 799.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-geeksquad",
+  "merchant": "bestbuy",
+  "title": "Geek Squad Protection 2-Year Plan",
+  "brand": "Geek Squad",
+  "breadcrumb": [
+   "Services",
+   "Protection Plans"
+  ],
+  "price": 149.99,
+  "seller": "merchant",
+  "flags": [
+   "warranty",
+   "service"
+  ]
+ },
+ {
+  "id": "bb-sonos-era",
+  "merchant": "bestbuy",
+  "title": "Sonos Era 100 Smart Speaker",
+  "brand": "Sonos",
+  "breadcrumb": [
+   "Deals"
+  ],
+  "price": 249,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-ninja-grill",
+  "merchant": "bestbuy",
+  "title": "Ninja Foodi Smart XL Indoor Grill",
+  "brand": "Ninja",
+  "breadcrumb": [
+   "Deals"
+  ],
+  "price": 229.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-bose-earbuds",
+  "merchant": "bestbuy",
+  "title": "Bose QuietComfort Earbuds",
+  "brand": "Bose",
+  "breadcrumb": [
+   "Featured"
+  ],
+  "price": 179,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-jbl-flip",
+  "merchant": "bestbuy",
+  "title": "JBL Flip 6 Portable Bluetooth Speaker",
+  "brand": "JBL",
+  "breadcrumb": [],
+  "price": 99.95,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "bb-dell-xps",
+  "merchant": "bestbuy",
+  "title": "Dell XPS 13 Laptop",
+  "brand": "Dell",
+  "breadcrumb": [
+   "Sale"
+  ],
+  "price": 999.99,
+  "seller": "merchant",
+  "flags": []
+ }
+]

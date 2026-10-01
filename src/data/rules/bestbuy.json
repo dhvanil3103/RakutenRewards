@@ -1,0 +1,1477 @@
+{
+ "merchantId": "bestbuy",
+ "name": "Best Buy",
+ "calcBasis": "item price excluding tax, shipping, warranties, services",
+ "defaultRate": {
+  "rate": 1,
+  "label": "All Other Non-Excluded Items"
+ },
+ "rateRows": [
+  {
+   "id": "8-ninja-appliances",
+   "label": "Ninja Appliances",
+   "rate": 8,
+   "match": {
+    "brandAny": [
+     "ninja"
+    ],
+    "pathAny": [
+     "appliances"
+    ]
+   },
+   "source": "8% Cash Back - Ninja Appliances"
+  },
+  {
+   "id": "8-ninja-health-wellness-fitness",
+   "label": "Ninja Health, Wellness, & Fitness",
+   "rate": 8,
+   "match": {
+    "brandAny": [
+     "ninja"
+    ],
+    "pathAny": [
+     "health",
+     "wellness",
+     "fitness"
+    ]
+   },
+   "source": "8% Cash Back - Ninja Health, Wellness, & Fitness"
+  },
+  {
+   "id": "8-shark-appliances",
+   "label": "Shark Appliances",
+   "rate": 8,
+   "match": {
+    "brandAny": [
+     "shark"
+    ],
+    "pathAny": [
+     "appliances"
+    ]
+   },
+   "source": "8% Cash Back - Shark Appliances"
+  },
+  {
+   "id": "8-shark-health-wellness-fitness",
+   "label": "Shark Health, Wellness, & Fitness",
+   "rate": 8,
+   "match": {
+    "brandAny": [
+     "shark"
+    ],
+    "pathAny": [
+     "health",
+     "wellness",
+     "fitness"
+    ]
+   },
+   "source": "8% Cash Back - Shark Health, Wellness, & Fitness"
+  },
+  {
+   "id": "7-5-sony-headphones",
+   "label": "Sony Headphones",
+   "rate": 7.5,
+   "match": {
+    "brandAny": [
+     "sony"
+    ],
+    "pathAny": [
+     "headphones"
+    ]
+   },
+   "source": "7.5% Cash Back - Sony Headphones"
+  },
+  {
+   "id": "7-bose-headphones",
+   "label": "Bose Headphones",
+   "rate": 7,
+   "match": {
+    "brandAny": [
+     "bose"
+    ],
+    "pathAny": [
+     "headphones"
+    ]
+   },
+   "source": "7% Cash Back - Bose Headphones"
+  },
+  {
+   "id": "6-all-headphones-excluding-apple-and-beats",
+   "label": "All Headphones (excluding Apple and Beats)",
+   "rate": 6,
+   "match": {
+    "pathAny": [
+     "headphones"
+    ],
+    "notBrandAny": [
+     "apple",
+     "beats"
+    ]
+   },
+   "source": "6% Cash Back - All Headphones (excluding Apple and Beats)"
+  },
+  {
+   "id": "6-hp-printers",
+   "label": "HP Printers",
+   "rate": 6,
+   "match": {
+    "brandAny": [
+     "hp"
+    ],
+    "pathAny": [
+     "printers"
+    ]
+   },
+   "source": "6% Cash Back - HP Printers"
+  },
+  {
+   "id": "5-ge-ge-profile-appliances",
+   "label": "GE & GE Profile Appliances",
+   "rate": 5,
+   "match": {
+    "brandAny": [
+     "ge",
+     "ge profile"
+    ],
+    "pathAny": [
+     "appliances"
+    ]
+   },
+   "source": "5% Cash Back - GE & GE Profile Appliances"
+  },
+  {
+   "id": "5-hisense-tvs",
+   "label": "Hisense TVs",
+   "rate": 5,
+   "match": {
+    "brandAny": [
+     "hisense"
+    ],
+    "pathAny": [
+     "tvs"
+    ]
+   },
+   "source": "5% Cash Back - Hisense TVs"
+  },
+  {
+   "id": "5-ring-home-security-monitoring",
+   "label": "Ring Home Security & Monitoring",
+   "rate": 5,
+   "match": {
+    "brandAny": [
+     "ring"
+    ],
+    "pathAny": [
+     "security",
+     "monitoring"
+    ]
+   },
+   "source": "5% Cash Back - Ring Home Security & Monitoring"
+  },
+  {
+   "id": "5-sony-tvs",
+   "label": "Sony TVs",
+   "rate": 5,
+   "match": {
+    "brandAny": [
+     "sony"
+    ],
+    "pathAny": [
+     "tvs"
+    ]
+   },
+   "source": "5% Cash Back - Sony TVs"
+  },
+  {
+   "id": "5-steel-series-pc-gaming-video-game-accessories",
+   "label": "Steel Series PC Gaming & Video Game Accessories",
+   "rate": 5,
+   "match": {
+    "brandAny": [
+     "steelseries",
+     "steel series"
+    ],
+    "pathAny": [
+     "pc gaming",
+     "gaming accessories"
+    ]
+   },
+   "source": "5% Cash Back - Steel Series PC Gaming & Video Game Accessories"
+  },
+  {
+   "id": "4-energizer-cell-phone-chargers-cables",
+   "label": "Energizer Cell Phone Chargers & Cables",
+   "rate": 4,
+   "match": {
+    "brandAny": [
+     "energizer"
+    ],
+    "pathAny": [
+     "chargers",
+     "cables"
+    ]
+   },
+   "source": "4% Cash Back - Energizer Cell Phone Chargers & Cables"
+  },
+  {
+   "id": "4-epson-projectors-screens",
+   "label": "Epson Projectors & Screens",
+   "rate": 4,
+   "match": {
+    "brandAny": [
+     "epson"
+    ],
+    "pathAny": [
+     "projectors"
+    ]
+   },
+   "source": "4% Cash Back - Epson Projectors & Screens"
+  },
+  {
+   "id": "4-nintendo-video-games",
+   "label": "Nintendo Video Games",
+   "rate": 4,
+   "match": {
+    "brandAny": [
+     "nintendo"
+    ],
+    "pathAny": [
+     "video games"
+    ],
+    "notFlagsAny": [
+     "digitalDownload"
+    ]
+   },
+   "source": "4% Cash Back - Nintendo Video Games"
+  },
+  {
+   "id": "4-select-lenovo-laptops",
+   "label": "Select Lenovo Laptops",
+   "rate": 4,
+   "match": {
+    "brandAny": [
+     "lenovo"
+    ],
+    "pathAny": [
+     "laptops"
+    ],
+    "flagsAll": [
+     "selectLenovo"
+    ]
+   },
+   "source": "4% Cash Back - Select Lenovo Laptops"
+  },
+  {
+   "id": "3-all-non-apple-headphones",
+   "label": "All Non-Apple Headphones",
+   "rate": 3,
+   "match": {
+    "pathAny": [
+     "headphones"
+    ],
+    "notBrandAny": [
+     "apple"
+    ]
+   },
+   "source": "3% Cash Back - All Non-Apple Headphones"
+  },
+  {
+   "id": "3-amazon-tablets",
+   "label": "Amazon Tablets",
+   "rate": 3,
+   "match": {
+    "brandAny": [
+     "amazon"
+    ],
+    "pathAny": [
+     "tablets"
+    ]
+   },
+   "source": "3% Cash Back - Amazon Tablets"
+  },
+  {
+   "id": "3-amazon-video-hardware",
+   "label": "Amazon Video Hardware",
+   "rate": 3,
+   "match": {
+    "brandAny": [
+     "amazon"
+    ],
+    "pathAny": [
+     "streaming",
+     "video hardware",
+     "fire tv"
+    ]
+   },
+   "source": "3% Cash Back - Amazon Video Hardware"
+  },
+  {
+   "id": "3-amazon-voice-assistants",
+   "label": "Amazon Voice Assistants",
+   "rate": 3,
+   "match": {
+    "brandAny": [
+     "amazon"
+    ],
+    "pathAny": [
+     "voice assistants",
+     "smart speakers"
+    ]
+   },
+   "source": "3% Cash Back - Amazon Voice Assistants"
+  },
+  {
+   "id": "3-best-buy-essentials",
+   "label": "Best Buy Essentials",
+   "rate": 3,
+   "match": {
+    "brandAny": [
+     "best buy essentials"
+    ]
+   },
+   "source": "3% Cash Back - Best Buy Essentials"
+  },
+  {
+   "id": "3-blink-security-and-video",
+   "label": "Blink Security and Video",
+   "rate": 3,
+   "match": {
+    "brandAny": [
+     "blink"
+    ],
+    "pathAny": [
+     "security",
+     "video"
+    ]
+   },
+   "source": "3% Cash Back - Blink Security and Video"
+  },
+  {
+   "id": "3-insignia-products",
+   "label": "Insignia Products",
+   "rate": 3,
+   "match": {
+    "brandAny": [
+     "insignia"
+    ]
+   },
+   "source": "3% Cash Back - Insignia Products"
+  },
+  {
+   "id": "3-lenovo-tablets",
+   "label": "Lenovo Tablets",
+   "rate": 3,
+   "match": {
+    "brandAny": [
+     "lenovo"
+    ],
+    "pathAny": [
+     "tablets"
+    ]
+   },
+   "source": "3% Cash Back - Lenovo Tablets"
+  },
+  {
+   "id": "3-rocketfish-accessories",
+   "label": "Rocketfish Accessories",
+   "rate": 3,
+   "match": {
+    "brandAny": [
+     "rocketfish"
+    ]
+   },
+   "source": "3% Cash Back - Rocketfish Accessories"
+  },
+  {
+   "id": "3-samsung-phones",
+   "label": "Samsung Phones",
+   "rate": 3,
+   "match": {
+    "brandAny": [
+     "samsung"
+    ],
+    "pathAny": [
+     "phones"
+    ]
+   },
+   "source": "3% Cash Back - Samsung Phones"
+  },
+  {
+   "id": "3-select-third-party-seller-items",
+   "label": "Select Third-Party Seller Items",
+   "rate": 3,
+   "match": {
+    "seller": "third_party",
+    "flagsAll": [
+     "selectThirdParty"
+    ]
+   },
+   "source": "3% Cash Back - Select Third-Party Seller Items"
+  },
+  {
+   "id": "2-5-dell-laptops",
+   "label": "Dell Laptops",
+   "rate": 2.5,
+   "match": {
+    "brandAny": [
+     "dell"
+    ],
+    "pathAny": [
+     "laptops"
+    ]
+   },
+   "source": "2.5% Cash Back - Dell Laptops"
+  },
+  {
+   "id": "2-asus-chromebooks",
+   "label": "ASUS Chromebooks",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "asus"
+    ],
+    "pathAny": [
+     "chromebooks"
+    ]
+   },
+   "source": "2% Cash Back - ASUS Chromebooks"
+  },
+  {
+   "id": "2-acer-chromebooks",
+   "label": "Acer Chromebooks",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "acer"
+    ],
+    "pathAny": [
+     "chromebooks"
+    ]
+   },
+   "source": "2% Cash Back - Acer Chromebooks"
+  },
+  {
+   "id": "2-asus-pc-gaming-accessories",
+   "label": "Asus PC Gaming Accessories",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "asus"
+    ],
+    "pathAny": [
+     "pc gaming",
+     "gaming accessories"
+    ]
+   },
+   "source": "2% Cash Back - Asus PC Gaming Accessories"
+  },
+  {
+   "id": "2-epson-printers",
+   "label": "Epson Printers",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "epson"
+    ],
+    "pathAny": [
+     "printers"
+    ]
+   },
+   "source": "2% Cash Back - Epson Printers"
+  },
+  {
+   "id": "2-ge-freezers-ice-makers",
+   "label": "GE Freezers & Ice Makers",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "ge",
+     "ge profile"
+    ],
+    "pathAny": [
+     "freezers",
+     "ice makers"
+    ]
+   },
+   "source": "2% Cash Back - GE Freezers & Ice Makers"
+  },
+  {
+   "id": "2-hp-chromebooks",
+   "label": "HP Chromebooks",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "hp"
+    ],
+    "pathAny": [
+     "chromebooks"
+    ]
+   },
+   "source": "2% Cash Back - HP Chromebooks"
+  },
+  {
+   "id": "2-hp-mini-pcs",
+   "label": "HP Mini PCs",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "hp"
+    ],
+    "pathAny": [
+     "mini pcs"
+    ]
+   },
+   "source": "2% Cash Back - HP Mini PCs"
+  },
+  {
+   "id": "2-hyperx-pc-gaming-accessories",
+   "label": "HyperX PC Gaming Accessories",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "hyperx"
+    ],
+    "pathAny": [
+     "pc gaming",
+     "gaming accessories"
+    ]
+   },
+   "source": "2% Cash Back - HyperX PC Gaming Accessories"
+  },
+  {
+   "id": "2-insta360-antigravity-products",
+   "label": "Insta360 & Antigravity Products",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "insta360",
+     "antigravity"
+    ]
+   },
+   "source": "2% Cash Back - Insta360 & Antigravity Products"
+  },
+  {
+   "id": "2-jbl-portable-audio",
+   "label": "JBL Portable Audio",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "jbl"
+    ],
+    "pathAny": [
+     "portable audio",
+     "speakers"
+    ]
+   },
+   "source": "2% Cash Back - JBL Portable Audio"
+  },
+  {
+   "id": "2-jlab-headphones",
+   "label": "JLab Headphones",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "jlab"
+    ],
+    "pathAny": [
+     "headphones"
+    ]
+   },
+   "source": "2% Cash Back - JLab Headphones"
+  },
+  {
+   "id": "2-lg-appliances",
+   "label": "LG Appliances",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "lg"
+    ],
+    "pathAny": [
+     "appliances"
+    ]
+   },
+   "source": "2% Cash Back - LG Appliances"
+  },
+  {
+   "id": "2-lenovo-chromebooks",
+   "label": "Lenovo Chromebooks",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "lenovo"
+    ],
+    "pathAny": [
+     "chromebooks"
+    ]
+   },
+   "source": "2% Cash Back - Lenovo Chromebooks"
+  },
+  {
+   "id": "2-nintendo-switch-2-consoles",
+   "label": "Nintendo Switch 2 Consoles",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "nintendo"
+    ],
+    "pathAny": [
+     "consoles"
+    ],
+    "titleAny": [
+     "switch 2"
+    ]
+   },
+   "source": "2% Cash Back - Nintendo Switch 2 Consoles"
+  },
+  {
+   "id": "2-nintendo-switch-consoles",
+   "label": "Nintendo Switch Consoles",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "nintendo"
+    ],
+    "pathAny": [
+     "consoles"
+    ],
+    "titleAny": [
+     "switch"
+    ]
+   },
+   "source": "2% Cash Back - Nintendo Switch Consoles"
+  },
+  {
+   "id": "2-rgb-led-tvs",
+   "label": "RGB LED TVs",
+   "rate": 2,
+   "match": {
+    "pathAny": [
+     "tvs"
+    ],
+    "titleAny": [
+     "rgb"
+    ]
+   },
+   "source": "2% Cash Back - RGB LED TVs"
+  },
+  {
+   "id": "2-roku-tvs",
+   "label": "Roku TVs",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "roku"
+    ],
+    "pathAny": [
+     "tvs"
+    ]
+   },
+   "source": "2% Cash Back - Roku TVs"
+  },
+  {
+   "id": "2-samsung-chromebooks",
+   "label": "Samsung Chromebooks",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "samsung"
+    ],
+    "pathAny": [
+     "chromebooks"
+    ]
+   },
+   "source": "2% Cash Back - Samsung Chromebooks"
+  },
+  {
+   "id": "2-samsung-tvs",
+   "label": "Samsung TVs",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "samsung"
+    ],
+    "pathAny": [
+     "tvs"
+    ]
+   },
+   "source": "2% Cash Back - Samsung TVs"
+  },
+  {
+   "id": "2-select-amd-gaming-devices",
+   "label": "Select AMD Gaming Devices",
+   "rate": 2,
+   "match": {
+    "titleAny": [
+     "amd"
+    ],
+    "pathAny": [
+     "gaming"
+    ]
+   },
+   "source": "2% Cash Back - Select AMD Gaming Devices"
+  },
+  {
+   "id": "2-select-sony-video-and-projectors",
+   "label": "Select Sony Video and Projectors",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "sony"
+    ],
+    "pathAny": [
+     "projectors",
+     "blu-ray"
+    ]
+   },
+   "source": "2% Cash Back - Select Sony Video and Projectors"
+  },
+  {
+   "id": "2-select-tvs",
+   "label": "Select TVs",
+   "rate": 2,
+   "match": {
+    "pathAny": [
+     "tvs"
+    ],
+    "flagsAll": [
+     "selectTv"
+    ]
+   },
+   "source": "2% Cash Back - Select TVs"
+  },
+  {
+   "id": "2-skullcandy-headphones",
+   "label": "Skullcandy Headphones",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "skullcandy"
+    ],
+    "pathAny": [
+     "headphones"
+    ]
+   },
+   "source": "2% Cash Back - Skullcandy Headphones"
+  },
+  {
+   "id": "2-sonos-home-audio-speakers",
+   "label": "Sonos Home Audio & Speakers",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "sonos"
+    ],
+    "pathAny": [
+     "audio",
+     "speakers"
+    ]
+   },
+   "source": "2% Cash Back - Sonos Home Audio & Speakers"
+  },
+  {
+   "id": "2-top-deals",
+   "label": "Top Deals",
+   "rate": 2,
+   "match": {
+    "pathAny": [
+     "top deals"
+    ]
+   },
+   "source": "2% Cash Back - Top Deals"
+  },
+  {
+   "id": "2-whirlpool-appliances",
+   "label": "Whirlpool Appliances",
+   "rate": 2,
+   "match": {
+    "brandAny": [
+     "whirlpool"
+    ],
+    "pathAny": [
+     "appliances"
+    ]
+   },
+   "source": "2% Cash Back - Whirlpool Appliances"
+  },
+  {
+   "id": "1-5-electrolux-and-frigidaire-appliances",
+   "label": "Electrolux and Frigidaire Appliances",
+   "rate": 1.5,
+   "match": {
+    "brandAny": [
+     "electrolux",
+     "frigidaire"
+    ],
+    "pathAny": [
+     "appliances"
+    ]
+   },
+   "source": "1.5% Cash Back - Electrolux and Frigidaire Appliances"
+  },
+  {
+   "id": "1-5-frigidaire-appliances",
+   "label": "Frigidaire Appliances",
+   "rate": 1.5,
+   "match": {
+    "brandAny": [
+     "frigidaire"
+    ],
+    "pathAny": [
+     "appliances"
+    ]
+   },
+   "source": "1.5% Cash Back - Frigidaire Appliances"
+  },
+  {
+   "id": "1-5-kitchenaid-appliances",
+   "label": "Kitchenaid Appliances",
+   "rate": 1.5,
+   "match": {
+    "brandAny": [
+     "kitchenaid"
+    ],
+    "pathAny": [
+     "appliances"
+    ]
+   },
+   "source": "1.5% Cash Back - Kitchenaid Appliances"
+  },
+  {
+   "id": "1-5-lg-tvs",
+   "label": "LG TVs",
+   "rate": 1.5,
+   "match": {
+    "brandAny": [
+     "lg"
+    ],
+    "pathAny": [
+     "tvs"
+    ]
+   },
+   "source": "1.5% Cash Back - LG TVs"
+  },
+  {
+   "id": "1-5-maytag-appliances",
+   "label": "Maytag Appliances",
+   "rate": 1.5,
+   "match": {
+    "brandAny": [
+     "maytag"
+    ],
+    "pathAny": [
+     "appliances"
+    ]
+   },
+   "source": "1.5% Cash Back - Maytag Appliances"
+  },
+  {
+   "id": "1-all-other-cell-phones-excluding-iphones",
+   "label": "All Other Cell Phones (Excluding iPhones)",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "phones"
+    ],
+    "notBrandAny": [
+     "apple"
+    ]
+   },
+   "source": "1% Cash Back - All Other Cell Phones (Excluding iPhones)"
+  },
+  {
+   "id": "1-all-other-third-party-seller-items",
+   "label": "All Other Third-Party Seller Items",
+   "rate": 1,
+   "match": {
+    "seller": "third_party"
+   },
+   "source": "1% Cash Back - All Other Third-Party Seller Items"
+  },
+  {
+   "id": "1-appliances",
+   "label": "Appliances",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "appliances"
+    ]
+   },
+   "source": "1% Cash Back - Appliances"
+  },
+  {
+   "id": "1-audio",
+   "label": "Audio",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "audio"
+    ]
+   },
+   "source": "1% Cash Back - Audio"
+  },
+  {
+   "id": "1-cameras-camcorders-drones",
+   "label": "Cameras, Camcorders, & Drones",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "cameras",
+     "camcorders",
+     "drones"
+    ]
+   },
+   "source": "1% Cash Back - Cameras, Camcorders, & Drones"
+  },
+  {
+   "id": "1-car-electronics-gps",
+   "label": "Car Electronics & GPS",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "car electronics",
+     "gps"
+    ]
+   },
+   "source": "1% Cash Back - Car Electronics & GPS"
+  },
+  {
+   "id": "1-computer-accessories-tablet-accessories-and-monitors",
+   "label": "Computer Accessories, Tablet Accessories, and Monitors",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "computer accessories",
+     "tablet accessories",
+     "monitors"
+    ]
+   },
+   "source": "1% Cash Back - Computer Accessories, Tablet Accessories, and Monitors"
+  },
+  {
+   "id": "1-electric-transportation",
+   "label": "Electric Transportation",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "electric transportation",
+     "scooters",
+     "e-bikes"
+    ]
+   },
+   "source": "1% Cash Back - Electric Transportation"
+  },
+  {
+   "id": "1-health-wellness-fitness",
+   "label": "Health, Wellness & Fitness",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "health",
+     "wellness",
+     "fitness"
+    ]
+   },
+   "source": "1% Cash Back - Health, Wellness & Fitness"
+  },
+  {
+   "id": "1-home-furniture-office",
+   "label": "Home, Furniture & Office",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "home, furniture & office",
+     "furniture",
+     "office"
+    ]
+   },
+   "source": "1% Cash Back - Home, Furniture & Office"
+  },
+  {
+   "id": "1-outdoor-living",
+   "label": "Outdoor Living",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "outdoor living"
+    ]
+   },
+   "source": "1% Cash Back - Outdoor Living"
+  },
+  {
+   "id": "1-sandisk-pc-gaming",
+   "label": "SanDisk PC Gaming",
+   "rate": 1,
+   "match": {
+    "brandAny": [
+     "sandisk"
+    ],
+    "pathAny": [
+     "pc gaming"
+    ]
+   },
+   "source": "1% Cash Back - SanDisk PC Gaming"
+  },
+  {
+   "id": "1-select-major-appliances",
+   "label": "Select Major Appliances",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "major appliances"
+    ]
+   },
+   "source": "1% Cash Back - Select Major Appliances"
+  },
+  {
+   "id": "1-smart-home",
+   "label": "Smart Home",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "smart home"
+    ]
+   },
+   "source": "1% Cash Back - Smart Home"
+  },
+  {
+   "id": "1-tv-home-theater",
+   "label": "TV & Home Theater",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "tv & home theater"
+    ]
+   },
+   "source": "1% Cash Back - TV & Home Theater"
+  },
+  {
+   "id": "1-toys-games-collectibles",
+   "label": "Toys, Games & Collectibles",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "toys"
+    ]
+   },
+   "source": "1% Cash Back - Toys, Games & Collectibles"
+  },
+  {
+   "id": "1-video-games-excluding-digital-downloads",
+   "label": "Video Games (excluding digital downloads)",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "video games"
+    ],
+    "notFlagsAny": [
+     "digitalDownload"
+    ]
+   },
+   "source": "1% Cash Back - Video Games (excluding digital downloads)"
+  },
+  {
+   "id": "1-wearable-technology",
+   "label": "Wearable Technology",
+   "rate": 1,
+   "match": {
+    "pathAny": [
+     "wearable"
+    ]
+   },
+   "source": "1% Cash Back - Wearable Technology"
+  }
+ ],
+ "exclusions": [
+  {
+   "id": "ps5-pro",
+   "label": "PS5 Pro",
+   "match": {
+    "titleAny": [
+     "ps5 pro",
+     "playstation 5 pro"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on PS5 Pro.",
+   "source": "Exclusions: PS5 Pro"
+  },
+  {
+   "id": "apple-products-including-but-not-limited-to-iphones-apple-watch-macbooks-and-airpods",
+   "label": "Apple Products (including but not limited to, iPhones, Apple Watch, MacBooks, and AirPods)",
+   "match": {
+    "brandAny": [
+     "apple"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Apple Products (including but not limited to, iPhones, Apple Watch, MacBooks, and AirPods).",
+   "source": "Exclusions: Apple Products (including but not limited to, iPhones, Apple Watch, MacBooks, and AirPods)"
+  },
+  {
+   "id": "laptops-desktops",
+   "label": "Laptops & Desktops",
+   "match": {
+    "pathAny": [
+     "laptops",
+     "desktops"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Laptops & Desktops.",
+   "source": "Exclusions: Laptops & Desktops"
+  },
+  {
+   "id": "premium-luxury-appliances",
+   "label": "Premium & Luxury Appliances",
+   "match": {
+    "pathAny": [
+     "premium appliances",
+     "luxury appliances"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Premium & Luxury Appliances.",
+   "source": "Exclusions: Premium & Luxury Appliances"
+  },
+  {
+   "id": "video-game-consoles",
+   "label": "Video Game Consoles",
+   "match": {
+    "pathAny": [
+     "video game consoles"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Video Game Consoles.",
+   "source": "Exclusions: Video Game Consoles"
+  },
+  {
+   "id": "digital-download-video-games",
+   "label": "Digital Download Video Games",
+   "match": {
+    "flagsAll": [
+     "digitalDownload"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Digital Download Video Games.",
+   "source": "Exclusions: Digital Download Video Games"
+  },
+  {
+   "id": "magnolia-home-theater",
+   "label": "Magnolia Home Theater",
+   "match": {
+    "pathAny": [
+     "magnolia"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Magnolia Home Theater.",
+   "source": "Exclusions: Magnolia Home Theater"
+  },
+  {
+   "id": "wi-fi-networking",
+   "label": "Wi-Fi & Networking",
+   "match": {
+    "pathAny": [
+     "wi-fi",
+     "networking"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Wi-Fi & Networking.",
+   "source": "Exclusions: Wi-Fi & Networking"
+  },
+  {
+   "id": "security",
+   "label": "Security",
+   "match": {
+    "pathAny": [
+     "security"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Security.",
+   "source": "Exclusions: Security"
+  },
+  {
+   "id": "beats-by-dr-dre-headphones",
+   "label": "Beats by Dr. Dre Headphones",
+   "match": {
+    "brandAny": [
+     "beats"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Beats by Dr. Dre Headphones.",
+   "source": "Exclusions: Beats by Dr. Dre Headphones"
+  },
+  {
+   "id": "appliance-parts-accessories",
+   "label": "Appliance Parts & Accessories",
+   "match": {
+    "pathAny": [
+     "appliance parts"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Appliance Parts & Accessories.",
+   "source": "Exclusions: Appliance Parts & Accessories"
+  },
+  {
+   "id": "gift-cards",
+   "label": "Gift Cards",
+   "match": {
+    "flagsAll": [
+     "giftCard"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on the purchase of Gift Cards.",
+   "source": "Exclusions: the purchase of Gift Cards"
+  },
+  {
+   "id": "point-of-sale-activation-posa-cards",
+   "label": "Point of Sale Activation (POSA) Cards",
+   "match": {
+    "flagsAll": [
+     "pos_activation"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Point of Sale Activation (POSA) Cards.",
+   "source": "Exclusions: Point of Sale Activation (POSA) Cards"
+  },
+  {
+   "id": "electric-car-chargers",
+   "label": "Electric Car Chargers",
+   "match": {
+    "pathAny": [
+     "car chargers",
+     "ev chargers"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Electric Car Chargers.",
+   "source": "Exclusions: Electric Car Chargers"
+  },
+  {
+   "id": "tools",
+   "label": "Tools",
+   "match": {
+    "pathAny": [
+     "tools"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Tools.",
+   "source": "Exclusions: Tools"
+  },
+  {
+   "id": "digital-music",
+   "label": "Digital Music",
+   "match": {
+    "pathAny": [
+     "digital music"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Digital Music.",
+   "source": "Exclusions: Digital Music"
+  },
+  {
+   "id": "musical-instruments",
+   "label": "Musical Instruments",
+   "match": {
+    "pathAny": [
+     "musical instruments"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Musical Instruments.",
+   "source": "Exclusions: Musical Instruments"
+  },
+  {
+   "id": "best-buy-for-business",
+   "label": "Best Buy for Business",
+   "match": {
+    "pathAny": [
+     "best buy for business"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Best Buy for Business.",
+   "source": "Exclusions: Best Buy for Business"
+  },
+  {
+   "id": "services",
+   "label": "Services",
+   "match": {
+    "flagsAll": [
+     "service"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Services.",
+   "source": "Exclusions: Services"
+  },
+  {
+   "id": "installation",
+   "label": "Installation",
+   "match": {
+    "pathAny": [
+     "installation"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Installation.",
+   "source": "Exclusions: Installation"
+  },
+  {
+   "id": "warranties",
+   "label": "Warranties",
+   "match": {
+    "flagsAll": [
+     "warranty"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Warranties.",
+   "source": "Exclusions: Warranties"
+  },
+  {
+   "id": "delivery",
+   "label": "Delivery",
+   "match": {
+    "pathAny": [
+     "delivery"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Delivery.",
+   "source": "Exclusions: Delivery"
+  },
+  {
+   "id": "geek-squad-protection",
+   "label": "Geek Squad Protection",
+   "match": {
+    "brandAny": [
+     "geek squad"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Geek Squad Protection.",
+   "source": "Exclusions: Geek Squad Protection"
+  },
+  {
+   "id": "third-party-sellers-apple",
+   "label": "Third-party sellers: Apple",
+   "match": {
+    "seller": "third_party",
+    "brandAny": [
+     "apple"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Apple products from Third-Party Sellers.",
+   "source": "Exclusions: Apple products from Third-Party Sellers"
+  },
+  {
+   "id": "third-party-sellers-all-flat-screen-tvs",
+   "label": "Third-party sellers: All Flat Screen TVs",
+   "match": {
+    "seller": "third_party",
+    "pathAny": [
+     "tvs"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on All Flat Screen TVs from Third-Party Sellers.",
+   "source": "Exclusions: All Flat Screen TVs from Third-Party Sellers"
+  },
+  {
+   "id": "third-party-sellers-blue-label-laptops",
+   "label": "Third-party sellers: Blue Label Laptops",
+   "match": {
+    "seller": "third_party",
+    "pathAny": [
+     "blue label"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Blue Label Laptops from Third-Party Sellers.",
+   "source": "Exclusions: Blue Label Laptops from Third-Party Sellers"
+  },
+  {
+   "id": "third-party-sellers-point-shoot-cameras",
+   "label": "Third-party sellers: Point & Shoot Cameras",
+   "match": {
+    "seller": "third_party",
+    "pathAny": [
+     "point & shoot"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Point & Shoot Cameras from Third-Party Sellers.",
+   "source": "Exclusions: Point & Shoot Cameras from Third-Party Sellers"
+  },
+  {
+   "id": "third-party-sellers-video-game-consoles",
+   "label": "Third-party sellers: Video Game Consoles",
+   "match": {
+    "seller": "third_party",
+    "pathAny": [
+     "video game consoles"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Video Game Consoles from Third-Party Sellers.",
+   "source": "Exclusions: Video Game Consoles from Third-Party Sellers"
+  },
+  {
+   "id": "employee-discounted-orders",
+   "label": "Employee discounted orders",
+   "match": {},
+   "scope": "order",
+   "reason": "T&C: Cash Back is not available on Employee discounted orders.",
+   "source": "Exclusions: Employee discounted orders"
+  },
+  {
+   "id": "high-volume-reseller-orders",
+   "label": "High volume/reseller orders",
+   "match": {},
+   "scope": "order",
+   "reason": "T&C: Cash Back is not available on High volume/reseller orders.",
+   "source": "Exclusions: High volume/reseller orders"
+  }
+ ],
+ "orderRules": [
+  {
+   "id": "same-sku-6",
+   "type": "max_same_sku_qty",
+   "params": {
+    "threshold": 6
+   },
+   "message": "Cash Back is not available on orders with 6+ of the same SKU."
+  },
+  {
+   "id": "missing-30-days",
+   "type": "info",
+   "params": {},
+   "message": "Missing Cash Back must be reported within 30 days from order date."
+  },
+  {
+   "id": "us-site-only",
+   "type": "info",
+   "params": {},
+   "message": "Cash Back is only available on orders completed through the Best Buy US site."
+  }
+ ],
+ "specificityOverridesExclusions": true,
+ "specialTerms": [
+  "Cash Back is not available on high volume/reseller orders as defined by Best Buy. High volume orders are defined as 6 or more of the same eligible SKU within a 30-day period.",
+  "Cash Back is only available on orders completed through the Best Buy US site.",
+  "Missing Cash Back must be reported within 30 days from order date."
+ ]
+}

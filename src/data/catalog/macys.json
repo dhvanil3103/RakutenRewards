@@ -1,0 +1,615 @@
+[
+ {
+  "id": "mc-rl-shirt",
+  "merchant": "macys",
+  "title": "Ralph Lauren Classic-Fit Oxford Shirt",
+  "brand": "Ralph Lauren",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Shirts"
+  ],
+  "price": 98.5,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-hugo-suit",
+  "merchant": "macys",
+  "title": "Hugo Boss Slim-Fit Wool Suit",
+  "brand": "Hugo Boss",
+  "breadcrumb": [
+   "Men",
+   "Suits & Tailoring",
+   "Suits"
+  ],
+  "price": 695,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-ck-jeans",
+  "merchant": "macys",
+  "title": "Calvin Klein Slim Straight Jeans",
+  "brand": "Calvin Klein",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Jeans"
+  ],
+  "price": 79.5,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-th-polo",
+  "merchant": "macys",
+  "title": "Tommy Hilfiger Custom-Fit Polo",
+  "brand": "Tommy Hilfiger",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Polos"
+  ],
+  "price": 59.5,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-dkny-dress",
+  "merchant": "macys",
+  "title": "DKNY Sheath Dress",
+  "brand": "DKNY",
+  "breadcrumb": [
+   "Women",
+   "Clothing",
+   "Dresses"
+  ],
+  "price": 129,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-inc-blazer",
+  "merchant": "macys",
+  "title": "INC International Concepts Open-Front Blazer",
+  "brand": "INC International Concepts",
+  "breadcrumb": [
+   "Women",
+   "Clothing",
+   "Blazers"
+  ],
+  "price": 89.5,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-alfani-sweater",
+  "merchant": "macys",
+  "title": "Alfani Crewneck Sweater",
+  "brand": "Alfani",
+  "breadcrumb": [
+   "Men",
+   "Clothing",
+   "Sweaters"
+  ],
+  "price": 54.5,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-sofa",
+  "merchant": "macys",
+  "title": "Macy's Home Sectional Sofa",
+  "brand": "Macy's Home",
+  "breadcrumb": [
+   "Furniture",
+   "Living Room",
+   "Sofas"
+  ],
+  "price": 1299,
+  "seller": "merchant",
+  "flags": [
+   "furnitureMattress"
+  ]
+ },
+ {
+  "id": "mc-mattress",
+  "merchant": "macys",
+  "title": "Serta Perfect Sleeper Queen Mattress",
+  "brand": "Serta",
+  "breadcrumb": [
+   "Mattresses",
+   "Queen"
+  ],
+  "price": 899,
+  "seller": "merchant",
+  "flags": [
+   "furnitureMattress"
+  ]
+ },
+ {
+  "id": "mc-dresser",
+  "merchant": "macys",
+  "title": "Bayside Six-Drawer Dresser",
+  "brand": "Bayside",
+  "breadcrumb": [
+   "Furniture",
+   "Bedroom",
+   "Dressers"
+  ],
+  "price": 549,
+  "seller": "merchant",
+  "flags": [
+   "furnitureMattress"
+  ]
+ },
+ {
+  "id": "mc-market-board",
+  "merchant": "macys",
+  "title": "Bamboo Cutting Board Set",
+  "brand": "Kitchen Co",
+  "breadcrumb": [
+   "Kitchen",
+   "Cutlery & Boards"
+  ],
+  "price": 34.99,
+  "seller": "third_party",
+  "flags": [
+   "marketplace"
+  ]
+ },
+ {
+  "id": "mc-market-vase",
+  "merchant": "macys",
+  "title": "Hand-Blown Glass Vase",
+  "brand": "Studio North",
+  "breadcrumb": [
+   "Home Decor",
+   "Vases"
+  ],
+  "price": 58,
+  "seller": "third_party",
+  "flags": [
+   "marketplace"
+  ]
+ },
+ {
+  "id": "mc-tv",
+  "merchant": "macys",
+  "title": "Samsung 50-inch Crystal UHD TV",
+  "brand": "Samsung",
+  "breadcrumb": [
+   "Electronics",
+   "TVs"
+  ],
+  "price": 429.99,
+  "seller": "merchant",
+  "flags": [
+   "electronics"
+  ]
+ },
+ {
+  "id": "mc-headphones",
+  "merchant": "macys",
+  "title": "JBL Tune 520BT Headphones",
+  "brand": "JBL",
+  "breadcrumb": [
+   "Electronics",
+   "Audio"
+  ],
+  "price": 49.95,
+  "seller": "merchant",
+  "flags": [
+   "electronics"
+  ]
+ },
+ {
+  "id": "mc-rug",
+  "merchant": "macys",
+  "title": "Safavieh Area Rug 5x8",
+  "brand": "Safavieh",
+  "breadcrumb": [
+   "Home",
+   "Rugs"
+  ],
+  "price": 249,
+  "seller": "merchant",
+  "flags": [
+   "rug"
+  ]
+ },
+ {
+  "id": "mc-book",
+  "merchant": "macys",
+  "title": "The Barefoot Contessa Cookbook",
+  "brand": "Clarkson Potter",
+  "breadcrumb": [
+   "Kitchen",
+   "Books"
+  ],
+  "price": 35,
+  "seller": "merchant",
+  "flags": [
+   "book"
+  ]
+ },
+ {
+  "id": "mc-pandora",
+  "merchant": "macys",
+  "title": "Pandora Moments Snake Chain Bracelet",
+  "brand": "Pandora",
+  "breadcrumb": [
+   "Jewelry",
+   "Bracelets"
+  ],
+  "price": 75,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-sunglasses",
+  "merchant": "macys",
+  "title": "Ray-Ban Wayfarer Sunglasses",
+  "brand": "Ray-Ban",
+  "breadcrumb": [
+   "Accessories",
+   "Sunglasses"
+  ],
+  "price": 163,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-birkenstock",
+  "merchant": "macys",
+  "title": "Birkenstock Arizona Sandals",
+  "brand": "Birkenstock",
+  "breadcrumb": [
+   "Women",
+   "Shoes",
+   "Sandals"
+  ],
+  "price": 110,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-mk-watch",
+  "merchant": "macys",
+  "title": "Michael Kors Runway Chronograph Watch",
+  "brand": "Michael Kors",
+  "breadcrumb": [
+   "Jewelry & Watches",
+   "Watches"
+  ],
+  "price": 295,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-movado",
+  "merchant": "macys",
+  "title": "Movado Bold Fusion Watch",
+  "brand": "Movado",
+  "breadcrumb": [
+   "Jewelry & Watches",
+   "Watches"
+  ],
+  "price": 495,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-effy-ring",
+  "merchant": "macys",
+  "title": "Effy Diamond Halo Ring",
+  "brand": "Effy",
+  "breadcrumb": [
+   "Jewelry & Watches",
+   "Rings"
+  ],
+  "price": 1495,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-fitbit",
+  "merchant": "macys",
+  "title": "Fitbit Charge 6 Fitness Tracker",
+  "brand": "Fitbit",
+  "breadcrumb": [
+   "Health & Fitness",
+   "Fitness Trackers"
+  ],
+  "price": 159.95,
+  "seller": "merchant",
+  "flags": [
+   "healthFitness",
+   "electronics"
+  ]
+ },
+ {
+  "id": "mc-yoga-mat",
+  "merchant": "macys",
+  "title": "Gaiam Premium Yoga Mat",
+  "brand": "Gaiam",
+  "breadcrumb": [
+   "Health & Fitness",
+   "Yoga"
+  ],
+  "price": 39.99,
+  "seller": "merchant",
+  "flags": [
+   "healthFitness"
+  ]
+ },
+ {
+  "id": "mc-apple-watch",
+  "merchant": "macys",
+  "title": "Apple Watch SE",
+  "brand": "Apple",
+  "breadcrumb": [
+   "Electronics",
+   "Wearables"
+  ],
+  "price": 249,
+  "seller": "merchant",
+  "flags": [
+   "electronics"
+  ]
+ },
+ {
+  "id": "mc-tumi",
+  "merchant": "macys",
+  "title": "Tumi Alpha Carry-On",
+  "brand": "Tumi",
+  "breadcrumb": [
+   "Luggage",
+   "Carry-On"
+  ],
+  "price": 695,
+  "seller": "merchant",
+  "flags": [
+   "leasedBrand"
+  ]
+ },
+ {
+  "id": "mc-giftcard",
+  "merchant": "macys",
+  "title": "Macy's Gift Card $100",
+  "brand": "Macy's",
+  "breadcrumb": [
+   "Gift Cards",
+   "Digital"
+  ],
+  "price": 100,
+  "seller": "merchant",
+  "flags": [
+   "giftCard"
+  ]
+ },
+ {
+  "id": "mc-estee",
+  "merchant": "macys",
+  "title": "Estee Lauder Advanced Night Repair Serum",
+  "brand": "Estee Lauder",
+  "breadcrumb": [
+   "Beauty",
+   "Skin Care",
+   "Serums"
+  ],
+  "price": 115,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-clinique",
+  "merchant": "macys",
+  "title": "Clinique Moisture Surge Hydrator",
+  "brand": "Clinique",
+  "breadcrumb": [
+   "Beauty",
+   "Skin Care",
+   "Moisturizers"
+  ],
+  "price": 42,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-mac-lip",
+  "merchant": "macys",
+  "title": "MAC Retro Matte Lipstick",
+  "brand": "MAC",
+  "breadcrumb": [
+   "Beauty",
+   "Makeup",
+   "Lips"
+  ],
+  "price": 25,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-martha-towels",
+  "merchant": "macys",
+  "title": "Martha Stewart Collection Bath Towels",
+  "brand": "Martha Stewart",
+  "breadcrumb": [
+   "Bed & Bath",
+   "Bath",
+   "Towels"
+  ],
+  "price": 12.99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-hotel-sheets",
+  "merchant": "macys",
+  "title": "Hotel Collection 680 Thread Count Sheet Set",
+  "brand": "Hotel Collection",
+  "breadcrumb": [
+   "Bed & Bath",
+   "Bedding",
+   "Sheets"
+  ],
+  "price": 199,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-carters",
+  "merchant": "macys",
+  "title": "Carter's Baby 5-Piece Set",
+  "brand": "Carter's",
+  "breadcrumb": [
+   "Kids & Baby",
+   "Baby",
+   "Sets"
+  ],
+  "price": 32,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-levis-kids",
+  "merchant": "macys",
+  "title": "Levi's Kids 511 Slim Jeans",
+  "brand": "Levi's",
+  "breadcrumb": [
+   "Kids & Baby",
+   "Kids",
+   "Jeans"
+  ],
+  "price": 44,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-disney-baby",
+  "merchant": "macys",
+  "title": "Disney Baby Mickey Bodysuit",
+  "brand": "Disney",
+  "breadcrumb": [
+   "Kids & Baby",
+   "Baby",
+   "Bodysuits"
+  ],
+  "price": 18,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-marc-bag",
+  "merchant": "macys",
+  "title": "Marc Jacobs The Tote Bag",
+  "brand": "Marc Jacobs",
+  "breadcrumb": [
+   "Handbags",
+   "Totes"
+  ],
+  "price": 350,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-bcbg-dress",
+  "merchant": "macys",
+  "title": "BCBG Satin Slip Dress",
+  "brand": "BCBG",
+  "breadcrumb": [
+   "Women",
+   "Clothing",
+   "Dresses"
+  ],
+  "price": 168,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-mango-jacket",
+  "merchant": "macys",
+  "title": "Mango Faux Leather Jacket",
+  "brand": "Mango",
+  "breadcrumb": [
+   "Women",
+   "Clothing",
+   "Jackets"
+  ],
+  "price": 129,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-messy-boss-polo",
+  "merchant": "macys",
+  "title": "Hugo Boss Cotton Polo",
+  "brand": "Hugo Boss",
+  "breadcrumb": [
+   "Sale"
+  ],
+  "price": 99,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-messy-pandora",
+  "merchant": "macys",
+  "title": "Pandora Sterling Charm",
+  "brand": "Pandora",
+  "breadcrumb": [
+   "Deals"
+  ],
+  "price": 45,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-messy-mk-tote",
+  "merchant": "macys",
+  "title": "Michael Kors Leather Tote",
+  "brand": "Michael Kors",
+  "breadcrumb": [
+   "Deals"
+  ],
+  "price": 248,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-messy-mattress",
+  "merchant": "macys",
+  "title": "Serta Queen Mattress Set",
+  "brand": "Serta",
+  "breadcrumb": [
+   "Deals"
+  ],
+  "price": 799,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-messy-shades",
+  "merchant": "macys",
+  "title": "Sunglass Hut Aviator Sunglasses",
+  "brand": "Ray-Ban",
+  "breadcrumb": [],
+  "price": 154,
+  "seller": "merchant",
+  "flags": []
+ },
+ {
+  "id": "mc-messy-soundbar",
+  "merchant": "macys",
+  "title": "Samsung Soundbar 2.1ch",
+  "brand": "Samsung",
+  "breadcrumb": [
+   "Deals"
+  ],
+  "price": 179,
+  "seller": "merchant",
+  "flags": []
+ }
+]

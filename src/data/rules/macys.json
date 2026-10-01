@@ -1,0 +1,215 @@
+{
+ "merchantId": "macys",
+ "name": "Macy's",
+ "calcBasis": "item price excluding tax, shipping, and the portion paid with Star Dollars",
+ "defaultRate": {
+  "rate": 4,
+  "label": "All Other Categories"
+ },
+ "rateRows": [
+  {
+   "id": "furniture-mattresses",
+   "label": "Furniture & Mattresses",
+   "rate": 1.5,
+   "match": {
+    "flagsAll": [
+     "furnitureMattress"
+    ]
+   },
+   "source": "Exclusions: Furniture & Mattresses will earn 1.5% Cash Back."
+  },
+  {
+   "id": "marketplace",
+   "label": "Items shipped and sold by Marketplace",
+   "rate": 1.5,
+   "match": {
+    "seller": "third_party"
+   },
+   "source": "Items shipped and sold by Marketplace (third party sellers as indicated on the product page) ... will earn 1.5% Cash Back."
+  },
+  {
+   "id": "electronics",
+   "label": "Electronics",
+   "rate": 1.5,
+   "match": {
+    "flagsAll": [
+     "electronics"
+    ]
+   },
+   "source": "... and Electronics will earn 1.5% Cash Back."
+  }
+ ],
+ "exclusions": [
+  {
+   "id": "gift-certificates-and-gift-cards",
+   "label": "Gift certificates and gift cards",
+   "match": {
+    "flagsAll": [
+     "giftCard"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on the purchase of gift certificates, gift cards, corporate gift cards.",
+   "source": "Exclusions: the purchase of gift certificates, gift cards, corporate gift cards"
+  },
+  {
+   "id": "books",
+   "label": "Books",
+   "match": {
+    "flagsAll": [
+     "book"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Books.",
+   "source": "Exclusions: Books"
+  },
+  {
+   "id": "leased-brand-items",
+   "label": "Leased brand items",
+   "match": {
+    "flagsAll": [
+     "leasedBrand"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Leased brand items.",
+   "source": "Exclusions: Leased brand items"
+  },
+  {
+   "id": "health-fitness",
+   "label": "Health/Fitness",
+   "match": {
+    "flagsAll": [
+     "healthFitness"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Health/Fitness.",
+   "source": "Exclusions: Health/Fitness"
+  },
+  {
+   "id": "rugs",
+   "label": "Rugs",
+   "match": {
+    "flagsAll": [
+     "rug"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Rugs.",
+   "source": "Exclusions: Rugs"
+  },
+  {
+   "id": "sports-fan-shop-by-lids",
+   "label": "Sports Fan Shop by Lids",
+   "match": {
+    "pathAny": [
+     "fan shop"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Sports Fan Shop by Lids.",
+   "source": "Exclusions: Sports Fan Shop by Lids"
+  },
+  {
+   "id": "shoes-by-finish-line",
+   "label": "Shoes by Finish Line",
+   "match": {
+    "pathAny": [
+     "finish line"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Shoes by Finish Line.",
+   "source": "Exclusions: Shoes by Finish Line"
+  },
+  {
+   "id": "sunglasses-sunglasses-by-sunglass-hut",
+   "label": "Sunglasses/Sunglasses by Sunglass Hut",
+   "match": {
+    "pathAny": [
+     "sunglasses"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on sunglasses/Sunglasses by Sunglass Hut.",
+   "source": "Exclusions: sunglasses/Sunglasses by Sunglass Hut"
+  },
+  {
+   "id": "glasses-by-lenscrafters",
+   "label": "Glasses by LensCrafters",
+   "match": {
+    "pathAny": [
+     "lenscrafters"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Glasses by LensCrafters.",
+   "source": "Exclusions: Glasses by LensCrafters"
+  },
+  {
+   "id": "excluded-brands-apple-birkenstock-bcbg-motherhood-maternity-hugo-boss-mango-pandora-marc-jacobs",
+   "label": "Excluded brands: Apple, Birkenstock, BCBG, Motherhood Maternity, Hugo Boss, Mango, Pandora, Marc Jacobs",
+   "match": {
+    "brandAny": [
+     "apple",
+     "birkenstock",
+     "bcbg",
+     "motherhood maternity",
+     "hugo boss",
+     "mango",
+     "pandora",
+     "marc jacobs"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on these brands: Apple, Birkenstock, BCBG, Motherhood Maternity, Hugo Boss, Mango, Pandora, and Marc Jacobs.",
+   "source": "Exclusions: these brands: Apple, Birkenstock, BCBG, Motherhood Maternity, Hugo Boss, Mango, Pandora, and Marc Jacobs"
+  },
+  {
+   "id": "orders-placed-through-macyswineshop-com",
+   "label": "Orders placed through macyswineshop.com",
+   "match": {},
+   "scope": "order",
+   "reason": "T&C: Cash Back is not available on Orders placed through macyswineshop.com.",
+   "source": "Exclusions: Orders placed through macyswineshop.com"
+  },
+  {
+   "id": "adjustments-and-reorders",
+   "label": "Adjustments and reorders",
+   "match": {},
+   "scope": "order",
+   "reason": "T&C: Cash Back is not available on Adjustments and reorders.",
+   "source": "Exclusions: Adjustments and reorders"
+  },
+  {
+   "id": "orders-made-by-macy-s-employees",
+   "label": "Orders made by Macy's employees",
+   "match": {},
+   "scope": "order",
+   "reason": "T&C: Cash Back is not available on Orders made by Macy's employees.",
+   "source": "Exclusions: Orders made by Macy's employees"
+  }
+ ],
+ "orderRules": [
+  {
+   "id": "star-dollars",
+   "type": "reduce_base_by_store_credit",
+   "params": {
+    "input": "starDollars"
+   },
+   "message": "The portion of orders paid for using Macy's Star Dollars does not qualify for Cash Back."
+  },
+  {
+   "id": "not-wine-shop",
+   "type": "info",
+   "params": {},
+   "message": "Orders placed through macyswineshop.com, adjustments, reorders and employee orders do not earn Cash Back."
+  }
+ ],
+ "specificityOverridesExclusions": false,
+ "specialTerms": [
+  "The portion of orders paid for using Macy's Star Dollars do not qualify for Cash Back."
+ ]
+}

@@ -1,0 +1,170 @@
+{
+ "merchantId": "nike",
+ "name": "Nike",
+ "calcBasis": "item price excluding tax and shipping",
+ "defaultRate": {
+  "rate": 2,
+  "label": "Placeholder rate (no rate table in supplied terms)",
+  "assumed": true
+ },
+ "rateRows": [],
+ "exclusions": [
+  {
+   "id": "new-releases",
+   "label": "New releases",
+   "match": {
+    "flagsAll": [
+     "newRelease"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on New releases.",
+   "source": "Exclusions: New releases"
+  },
+  {
+   "id": "hyperice-products",
+   "label": "HyperIce products",
+   "match": {
+    "flagsAll": [
+     "hyperIce"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on HyperIce products.",
+   "source": "Exclusions: HyperIce products"
+  },
+  {
+   "id": "select-jordans",
+   "label": "Select Jordans",
+   "match": {
+    "flagsAll": [
+     "selectJordan"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Select Jordans.",
+   "source": "Exclusions: Select Jordans"
+  },
+  {
+   "id": "refurbished-shoes",
+   "label": "Refurbished shoes",
+   "match": {
+    "flagsAll": [
+     "refurbished"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Refurbished shoes.",
+   "source": "Exclusions: Refurbished shoes"
+  },
+  {
+   "id": "gift-cards",
+   "label": "Gift cards",
+   "match": {
+    "flagsAll": [
+     "giftCard"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Gift cards.",
+   "source": "Exclusions: Gift cards"
+  },
+  {
+   "id": "after-dark-marathon-tickets",
+   "label": "After Dark marathon tickets",
+   "match": {
+    "flagsAll": [
+     "marathonTicket"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on After Dark marathon tickets.",
+   "source": "Exclusions: After Dark marathon tickets"
+  },
+  {
+   "id": "purchases-made-through-the-nike-snkrs-app-or-referenced-on-nike-com-launch-as-only-available-in-the-snkrs-app",
+   "label": "Purchases made through the Nike SNKRS App or referenced on nike.com/launch as only available in the SNKRS app",
+   "match": {
+    "flagsAll": [
+     "snkrsOnly"
+    ]
+   },
+   "scope": "item",
+   "reason": "T&C: Cash Back is not available on Purchases made through the Nike SNKRS App or referenced on nike.com/launch as only available in the SNKRS app.",
+   "source": "Exclusions: Purchases made through the Nike SNKRS App or referenced on nike.com/launch as only available in the SNKRS app"
+  },
+  {
+   "id": "purchases-paid-for-with-gift-cards",
+   "label": "Purchases paid for with gift cards",
+   "match": {},
+   "scope": "order",
+   "reason": "T&C: Cash Back is not available on Purchases paid for with gift cards.",
+   "source": "Exclusions: Purchases paid for with gift cards"
+  },
+  {
+   "id": "non-us-orders",
+   "label": "Non-US orders",
+   "match": {},
+   "scope": "order",
+   "reason": "T&C: Cash Back is not available on Non-US orders.",
+   "source": "Exclusions: Non-US orders"
+  },
+  {
+   "id": "purchases-made-on-the-employee-website",
+   "label": "Purchases made on the employee website",
+   "match": {},
+   "scope": "order",
+   "reason": "T&C: Cash Back is not available on Purchases made on the employee website.",
+   "source": "Exclusions: Purchases made on the employee website"
+  },
+  {
+   "id": "nike-team-orders",
+   "label": "Nike Team orders",
+   "match": {},
+   "scope": "order",
+   "reason": "T&C: Cash Back is not available on Nike Team orders.",
+   "source": "Exclusions: Nike Team orders"
+  },
+  {
+   "id": "orders-deemed-by-nike-to-be-used-for-reselling-purposes",
+   "label": "Orders deemed by Nike to be used for reselling purposes",
+   "match": {},
+   "scope": "order",
+   "reason": "T&C: Cash Back is not available on Orders deemed by Nike to be used for reselling purposes.",
+   "source": "Exclusions: Orders deemed by Nike to be used for reselling purposes"
+  }
+ ],
+ "orderRules": [
+  {
+   "id": "non-us",
+   "type": "non_us_excluded",
+   "params": {},
+   "message": "Cash Back is not available on non-US orders."
+  },
+  {
+   "id": "void-returns",
+   "type": "void_all_on_returns",
+   "params": {},
+   "message": "Cash Back for the entire order will be void if there are returns/exchanges/cancellations on any part of an order."
+  },
+  {
+   "id": "review-500",
+   "type": "review_over_amount",
+   "params": {
+    "amount": 500
+   },
+   "message": "Orders over $500 may be subject to review and reversal."
+  },
+  {
+   "id": "research-60",
+   "type": "info",
+   "params": {},
+   "message": "Cash Back can only be researched for up to 60 days from the order date."
+  }
+ ],
+ "specificityOverridesExclusions": false,
+ "specialTerms": [
+  "Cash Back can only be researched for up to 60 days from the order date.",
+  "Cash Back on orders over $500 may be subject to review and reversal."
+ ]
+}
