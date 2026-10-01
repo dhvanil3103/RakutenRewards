@@ -30,8 +30,10 @@ Choices made where the brief was ambiguous.
 - Changing the classifier backend, or activating again, starts a new resolver: counters and cache reset.
 
 ## Jev adapter
-- Request shape taken from the TypeSafe docs (`POST https://api.typesafe.ai/v1/systemone`, Bearer auth, body `{ state, model, questions }`, one `choice` question with `criteria`, answer's `probabilities`). It has not been run against the live API (no key here). With no `VITE_JEV_API_KEY`, or on any error, it falls back to the mock; the debug panel names the backend.
-- A key in a Vite env var ends up in the browser bundle. Real calls should go through a backend proxy. `.env` is git-ignored; only `.env.example` is committed.
+- Request shape from the TypeSafe docs (`POST https://api.typesafe.ai/v1/systemone`, Bearer auth, body `{ state, model, questions }`, one `choice` question with `criteria`, answer's `probabilities`). Verified with a real call: HTTP 200, model `jev-latest` accepted, option ids like `__default__` accepted, about 400 ms.
+- The API does not allow browser-origin (CORS) requests, so the app calls it through a Vite dev-server proxy (`/api/jev`, see `vite.config.ts`) that adds the key from `VITE_JEV_API_KEY` server-side. Client code never references the key, so it is not bundled. This only works under `npm run dev`; a production deployment needs a real backend proxy.
+- On any failure (no key, proxy missing, API error) it falls back to the mock, and the debug panel shows a warning.
+- Only the `choice` primitive is used. I did not use the JS SDK (`@typesafe-ai/sdk`), `confidence`, Noul or Score.
 - The LLM adapter is a stub (TODO) that falls back to the mock.
 
 ## Other

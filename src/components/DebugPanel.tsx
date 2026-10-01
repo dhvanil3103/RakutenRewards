@@ -38,6 +38,7 @@ export function DebugPanel() {
         <dd className="mono big">{s.totalVisible === 0 ? "n/a" : `${s.avoidedPct.toFixed(1)}%`}</dd>
       </dl>
       <p className="muted small">Backend: {resolver.classifierName}</p>
+      {resolver.fellBack && <p className="warn">Last classifier call fell back to the mock (no key, proxy unavailable, or API error).</p>}
       {log.length > 0 && (
         <>
           <h4>Latest evaluations</h4>

@@ -45,6 +45,11 @@ export class Resolver {
     return this.classifier.name;
   }
 
+  /** True when the last Jev call fell back to the mock classifier. */
+  get fellBack() {
+    return (this.classifier as { lastFellBack?: boolean }).lastFellBack === true;
+  }
+
   subscribe = (fn: () => void) => {
     this.listeners.add(fn);
     return () => this.listeners.delete(fn);

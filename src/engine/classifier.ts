@@ -36,33 +36,34 @@ export class MockClassifier implements Classifier {
  * TypeSafe Jev ("System One") adapter. Request shape taken from https://docs.typesafe.ai/api.md
  * and /primitives/choice.md: POST /v1/systemone, Bearer auth, { state, model, questions }
  * with a "choice" question whose `criteria` maps option keys to descriptions; the answer
- * carries `probabilities`. Falls back to the mock when there is no key or the call fails.
- * A key in a browser bundle is public: real calls belong behind a backend proxy.
+ * carries `probabilities`. Verified against the live API (HTTP 200, option ids with underscores are fine).
+ * The API rejects browser origins (CORS), so the app calls it through the Vite dev proxy, which adds the key.
+ * Falls back to the mock when there is no key/proxy or the call fails.
  */
 export class JevAdapter implements Classifier {
-  name = "Jev adapter (falls back to mock without a key)";
+  name = "Jev adapter (falls back to mock on error)";
   lastFellBack = false;
   private fallback = new MockClassifier();
   constructor(
-    private apiKey?: string,
-    private url = "https://api.typesafe.ai/v1/systemone",
-    private model = "jev-latest",
+    private opts: { apiKey?: string; url?: string; viaProxy?: boolean; model?: string } = {},
   ) {}
 
   async classify(item: Item, candidates: Candidate[]) {
-    if (!this.apiKey) {
+    const { apiKey, viaProxy } = this.opts;
+    if (!apiKey && !viaProxy) {
       this.lastFellBack = true;
       return this.fallback.classify(item, candidates);
     }
     try {
       const criteria: Record<string, string> = {};
       for (const c of candidates) criteria[c.id] = c.id === EXCLUDED_ID || c.id === DEFAULT_ID ? c.label : `${c.label} (${c.source})`;
-      const res = await fetch(this.url, {
+      // Direct calls need the key here (and the API blocks browser origins); via a proxy the server adds it.
+      const res = await fetch(this.opts.url ?? "https://api.typesafe.ai/v1/systemone", {
         method: "POST",
-        headers: { Authorization: `Bearer ${this.apiKey}`, "Content-Type": "application/json" },
+        headers: { ...(apiKey ? { Authorization: `Bearer ${apiKey}` } : {}), "Content-Type": "application/json" },
         body: JSON.stringify({
           state: { title: item.title, brand: item.brand, breadcrumb: item.breadcrumb, seller: item.seller, flags: item.flags },
-          model: this.model,
+          model: this.opts.model ?? "jev-latest",
           questions: {
             category: {
               type: "choice",
@@ -94,8 +95,8 @@ export class LLMAdapter implements Classifier {
   }
 }
 
-export function createClassifier(kind: ClassifierKind, opts: { jevApiKey?: string } = {}): Classifier {
-  if (kind === "jev") return new JevAdapter(opts.jevApiKey);
+export function createClassifier(kind: ClassifierKind, opts: { jevApiKey?: string; jevProxyUrl?: string } = {}): Classifier {
+  if (kind === "jev") return new JevAdapter({ apiKey: opts.jevApiKey, url: opts.jevProxyUrl, viaProxy: !!opts.jevProxyUrl });
   if (kind === "llm") return new LLMAdapter();
   return new MockClassifier();
 }

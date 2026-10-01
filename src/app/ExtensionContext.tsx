@@ -34,7 +34,7 @@ export function ExtensionProvider({ children }: { children: ReactNode }) {
 
   // A fresh resolver per activation or backend change: counters and the cache start clean.
   const resolver = useMemo(
-    () => new Resolver(RULES, createClassifier(backend, { jevApiKey: import.meta.env.VITE_JEV_API_KEY as string | undefined })),
+    () => new Resolver(RULES, createClassifier(backend, { jevProxyUrl: "/api/jev/v1/systemone" })),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [backend, session],
   );
