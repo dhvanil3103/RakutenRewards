@@ -109,6 +109,7 @@ export class Resolver {
     }
 
     this.counters.classifierCalls++;
+    const started = Date.now();
     const p = this.classifier
       .classify(item, needsClassifier.candidates)
       .then((dist) => {
@@ -117,7 +118,7 @@ export class Resolver {
         this.counters.classifierResolved++;
         const r = applyChoice(item, rules, best.id, best.p);
         this.inflight.delete(key);
-        this.record(item, r, `classifier (${needsClassifier.reason})`);
+        this.record(item, r, `classifier via ${dist.via ?? this.classifier.name} in ${Date.now() - started} ms (${needsClassifier.reason})`);
         this.publish();
         return r;
       })

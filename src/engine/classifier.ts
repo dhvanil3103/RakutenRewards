@@ -5,8 +5,12 @@ import { DEFAULT_ID, EXCLUDED_ID, type Candidate } from "./types";
 export interface Classifier {
   name: string;
   // Choice over candidate rate rows plus an "excluded" option; returns probabilities.
-  classify(item: Item, candidates: Candidate[]): Promise<{ id: string; p: number }[]>;
+  classify(item: Item, candidates: Candidate[]): Promise<Distribution>;
 }
+
+/** Distribution plus which backend actually produced it (a Jev adapter can fall back to the mock). */
+export type Distribution = { id: string; p: number }[] & { via?: string };
+const tag = (d: { id: string; p: number }[], via: string): Distribution => Object.assign(d, { via });
 
 export type ClassifierKind = "mock" | "jev" | "llm";
 
@@ -28,7 +32,7 @@ export class MockClassifier implements Classifier {
     const max = Math.max(...scores);
     const exps = scores.map((s) => Math.exp((s - max) / this.temperature));
     const sum = exps.reduce((a, b) => a + b, 0);
-    return candidates.map((c, i) => ({ id: c.id, p: exps[i] / sum }));
+    return tag(candidates.map((c, i) => ({ id: c.id, p: exps[i] / sum })), "mock");
   }
 }
 
@@ -52,7 +56,7 @@ export class JevAdapter implements Classifier {
     const { apiKey, viaProxy } = this.opts;
     if (!apiKey && !viaProxy) {
       this.lastFellBack = true;
-      return this.fallback.classify(item, candidates);
+      return tag(await this.fallback.classify(item, candidates), "mock (no key/proxy)");
     }
     try {
       const criteria: Record<string, string> = {};
@@ -78,10 +82,10 @@ export class JevAdapter implements Classifier {
       const probs = body.answers?.category?.probabilities;
       if (!probs) throw new Error("Jev response had no probabilities");
       this.lastFellBack = false;
-      return Object.entries(probs).map(([id, p]) => ({ id, p }));
+      return tag(Object.entries(probs).map(([id, p]) => ({ id, p })), "Jev");
     } catch {
       this.lastFellBack = true;
-      return this.fallback.classify(item, candidates);
+      return tag(await this.fallback.classify(item, candidates), "mock (Jev call failed)");
     }
   }
 }

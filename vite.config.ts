@@ -16,6 +16,14 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
           rewrite: (p) => p.replace(/^\/api\/jev/, ""),
           headers: key ? { Authorization: `Bearer ${key}` } : {},
+          configure: (proxy) => {
+            const t = new WeakMap<object, number>();
+            proxy.on("proxyReq", (_p, req) => t.set(req, Date.now()));
+            proxy.on("proxyRes", (res, req) =>
+              console.log(`[jev proxy] ${req.method} ${req.url} -> ${res.statusCode} (${Date.now() - (t.get(req) ?? Date.now())} ms)`),
+            );
+            proxy.on("error", (err) => console.log(`[jev proxy] error: ${err.message}`));
+          },
         },
       },
     },
