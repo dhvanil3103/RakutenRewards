@@ -46,9 +46,10 @@ h1 { font-size: 1.6rem; margin: 0 0 .5rem; }
 .chip.sel { background: var(--brand); color: var(--ink); border-color: var(--brand); }
 
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem; }
-.card { background: var(--card); border: 2px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+.card { background: var(--card); border: 2px solid var(--line); border-radius: 10px; display: flex; flex-direction: column; }
 .card.ev { border-color: #2bb673; } .card.not-ev { border-style: dashed; }
 .card-media { position: relative; }
+.card-media .tile { border-radius: 8px 8px 0 0; }
 .tile { aspect-ratio: 4 / 3; background: var(--tint, #ddd); display: grid; place-items: center; font-size: 2.2rem; font-weight: 800; color: rgba(0,0,0,.35); letter-spacing: .05em; }
 .tile-big { aspect-ratio: 1; font-size: 5rem; border-radius: 10px; }
 .card-media a { display: block; }
@@ -64,7 +65,7 @@ h1 { font-size: 1.6rem; margin: 0 0 .5rem; }
 .badge-excluded { background: #8b8b85; color: #fff; }
 .badge-check { background: #fff; color: #444; border: 1.5px dashed #777; }
 .badge-est { background: var(--ok-bg); color: var(--ok); border: 1.5px dashed var(--ok); }
-.tip { display: none; position: absolute; top: calc(100% + 6px); right: 0; width: 240px; white-space: normal; background: #222; color: #fff; font-weight: 400; padding: .5rem .6rem; border-radius: 6px; z-index: 10; line-height: 1.35; text-align: left; }
+.tip { display: none; position: absolute; top: calc(100% + 6px); right: 0; width: 200px; max-width: calc(100vw - 32px); white-space: normal; background: #222; color: #fff; font-weight: 400; padding: .5rem .6rem; border-radius: 6px; z-index: 10; line-height: 1.35; text-align: left; }
 .badge:hover .tip, .badge:focus .tip { display: block; }
 
 .detail { display: grid; grid-template-columns: minmax(0, 420px) 1fr; gap: 2rem; }
