@@ -63,6 +63,7 @@ describe("exclusion conflicts", () => {
     expect([ring.status, ring.rate]).toEqual(["eligible", 5]);
     expect(ring.confidence).toBeLessThanOrEqual(0.6);
     expect(ring.reason).toContain("Listed rate conflicts with a general exclusion (Security)");
+    expect(evaluateRules(findItem("bestbuy", "bb-ring-doorbell")!, RULES.bestbuy).needsClassifier?.reason).toBe("conflict");
     const sw = bb("switch-console");
     expect(sw.rate).toBe(2);
     expect(sw.confidence).toBeLessThanOrEqual(0.6);

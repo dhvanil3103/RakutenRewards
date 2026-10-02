@@ -44,6 +44,7 @@ const INSTRUCTIONS =
   "The product's breadcrumb is often missing or generic (e.g. Deals) and its flags are not available, so decide mainly from the product title and brand, " +
   "using general knowledge of what the product is. Each option is a T&C line and says what it means for cash back. " +
   "Pick the option whose wording the product most plainly falls under. An exclusion option means the product earns no cash back. " +
+  "When both a specific listed rate and a general exclusion seem to apply, the more specific listed rate wins unless the product clearly belongs to the excluded group. " +
   "Choose the 'default' option only when no specific option fits, and 'not eligible' only when the product clearly cannot earn cash back.";
 
 /** Option description for Jev: the T&C wording plus what choosing it means. */

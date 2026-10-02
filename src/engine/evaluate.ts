@@ -78,11 +78,13 @@ export function evaluateRules(item: Item, rules: MerchantRules, quantity = 1): R
   const ex = exs[0] ?? null;
 
   let result: ItemResult;
+  let conflict = false;
   if (ex && !row) {
     result = excludedResult(ex.e);
   } else if (ex && row) {
     // The general exclusion loses only to a strictly more specific listed rate, and only for merchants that opt in.
     if (rules.specificityOverridesExclusions && row.s > ex.s) {
+      conflict = true;
       result = eligible(
         rules,
         item.price,
@@ -115,8 +117,18 @@ export function evaluateRules(item: Item, rules: MerchantRules, quantity = 1): R
     const d = defaultCandidate(rules);
     return { result, needsClassifier: { reason: "weak_signal", candidates: [...candidates, ...(d ? [d] : []), excludedCandidate()] } };
   }
+  // Anything the rules cannot finalize goes to the classifier instead of being guessed.
+  const d = defaultCandidate(rules);
+  const tail = [...(d ? [d] : []), excludedCandidate()];
+  if (conflict && row && ex) {
+    return { result, needsClassifier: { reason: "conflict", candidates: [...topRows.map((x) => x.r), ex.e, ...tail] } };
+  }
   if (tied && !ex) {
     return { result, needsClassifier: { reason: "tie", candidates: [...topRows.map((x) => x.r), excludedCandidate()] } };
+  }
+  if (result.status === "unknown") {
+    const pool: Candidate[] = [...rules.rateRows, ...rules.exclusions.filter((e) => e.scope === "item")];
+    return { result, needsClassifier: { reason: "unresolved", candidates: [...pool, excludedCandidate()] } };
   }
   return { result, needsClassifier: null };
 }

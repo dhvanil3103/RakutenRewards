@@ -20,7 +20,7 @@ export interface ItemResult {
 }
 
 export interface ClassifierRequest {
-  reason: "weak_signal" | "tie";
+  reason: "weak_signal" | "tie" | "conflict" | "unresolved";
   candidates: Candidate[];
 }
 
