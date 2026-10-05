@@ -118,3 +118,17 @@ h1 { font-size: 1.6rem; margin: 0 0 .5rem; }
 .card-media a { text-decoration: none; }
 .hint { background: #eaf1ff; color: #14306b; border: 1px solid #c4d6fb; border-radius: 8px; padding: .6rem .8rem; margin-bottom: 1rem; font-size: .9rem; }
 .hint .link { color: inherit; font-weight: 600; }
+
+.nav-btn { background: transparent; color: inherit; border: 1px solid currentColor; border-radius: 6px; padding: .25rem .6rem; font: inherit; cursor: pointer; opacity: .9; }
+.nav-btn:hover { opacity: 1; }
+.terms-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 60; }
+.terms { position: fixed; top: 0; right: 0; bottom: 0; width: min(480px, 100vw); background: #fff; color: var(--text); z-index: 61; display: flex; flex-direction: column; box-shadow: -8px 0 28px rgba(0,0,0,.25); }
+.terms-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 1rem; border-bottom: 1px solid var(--line); }
+.terms-head h2 { margin: 0; font-size: 1.05rem; }
+.terms-body { overflow: auto; padding: .6rem 1rem; flex: 1; font-size: .9rem; line-height: 1.45; }
+.terms-body h3 { font-size: .95rem; margin: 1.1rem 0 .3rem; }
+.terms-body h3.terms-rate { color: var(--ok); font-size: 1.05rem; }
+.terms-body p { margin: .3rem 0; }
+.terms-item { padding-left: 1rem; position: relative; }
+.terms-item::before { content: "•"; position: absolute; left: .2rem; }
+.terms-foot { padding: .6rem 1rem; margin: 0; border-top: 1px solid var(--line); }

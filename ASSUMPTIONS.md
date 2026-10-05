@@ -21,8 +21,8 @@ Choices made where the brief was ambiguous.
 - Items added before activation are flagged and show the banner. Their badges still appear once active.
 - The cart is saved in `localStorage`; the extension state is not.
 
-## Nike placeholder rate
-- Nike's terms have no rate table. `defaultRate` is 2% with `assumed: true`, confidence 0.5. The UI shows these as `2% est.` / `~$x est.` with the tooltip "Rate not in supplied terms; placeholder value." They are always shown as estimates, regardless of the confidence slider, rather than as "Check terms" (the brief asks for an estimate display here).
+## Nike default rate
+- Nike's default rate is 10% ("All Other Eligible Items"), confirmed by the project owner; the supplied exclusions still apply. It was a 2% placeholder before. The `assumed` mechanism (confidence 0.5, `est.` badge) remains in the engine for any future placeholder but no merchant uses it now.
 
 ## Cost control
 - **The cache key is `merchant:brand:breadcrumb`, as specified, and only classifier answers are cached.** Rule results depend on flags, seller and title, which are not part of the signature, so caching them by signature would be wrong. Rules are cheap and run for every product.

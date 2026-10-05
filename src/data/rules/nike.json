@@ -3,9 +3,8 @@
  "name": "Nike",
  "calcBasis": "item price excluding tax and shipping",
  "defaultRate": {
-  "rate": 2,
-  "label": "Placeholder rate (no rate table in supplied terms)",
-  "assumed": true
+  "rate": 10,
+  "label": "All Other Eligible Items"
  },
  "rateRows": [],
  "exclusions": [

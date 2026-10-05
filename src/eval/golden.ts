@@ -77,7 +77,7 @@ export const GOLDEN: Fixture[] = [
   mc("messy-shades", no, { note: "messy breadcrumb, classifier" }),
   mc("messy-boss-polo", no, { note: "messy breadcrumb, classifier" }),
   // Nike
-  nk("airmax90", ok(2), { note: "placeholder default rate" }),
+  nk("airmax90", ok(10), { note: "default rate" }),
   nk("airmax-dn8", no, { note: "new release" }),
   nk("hyperice-legs", no),
   nk("jordan-select", no),
@@ -88,5 +88,5 @@ export const GOLDEN: Fixture[] = [
   nk("airmax90", no, { cart: { nonUS: true }, note: "non-US shipping" }),
   nk("airmax90", { status: "excluded", cashBack: 0 }, { cart: { returnSimulated: true }, note: "return voids the whole order" }),
   nk("messy-hypervolt", no, { note: "missing flag, classifier" }),
-  nk("messy-pegasus", ok(2), { note: "weak signal, nothing to ask the classifier" }),
+  nk("messy-pegasus", ok(10), { note: "weak signal, nothing to ask the classifier" }),
 ];

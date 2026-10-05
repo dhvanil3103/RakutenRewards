@@ -47,7 +47,7 @@ Each product is evaluated **once**, and **only after it first becomes visible** 
 | **T&C (Terms & Conditions)** | The merchant's published rules: rates per category, exclusions, special terms. The source of truth. Raw text is saved verbatim in `src/data/terms/`. |
 | **Rate row** | One line like "7.5% Cash Back - Sony Headphones". Has an id, label, rate, match conditions and a `source` (the verbatim T&C label). |
 | **Exclusion** | A line like "Cash Back is not available on Apple Products". Items matching it earn nothing. Has a `reason` that quotes the T&C. |
-| **Default rate** | What an item earns when it matches no rate row and no exclusion. Best Buy 1% ("All Other Non-Excluded Items"), Macy's 4% ("All Other Categories"), Nike 2% (a placeholder, see Section 8). |
+| **Default rate** | What an item earns when it matches no rate row and no exclusion. Best Buy 1% ("All Other Non-Excluded Items"), Macy's 4% ("All Other Categories"), Nike 10% ("All Other Eligible Items"). |
 | **Order rule** | A rule about the whole order, not one item: max same-SKU quantity, store credit, non-US orders, returns, review amount, info notes. |
 | **Breadcrumb** | The category trail on a product page, e.g. `Audio > Headphones > Over-Ear Headphones`. Stored as a list of strings. The rules mostly match on words in it. |
 | **Weak signal** | A breadcrumb that tells the rules nothing: missing, fewer than 2 segments, or only generic words (Deals, Sale, Featured, Clearance, New, Trending...). |
@@ -199,7 +199,7 @@ Still final from rules alone: clear rate matches, plain exclusions (AirPods), ex
 | `4% back` / `~$12.40 back` | eligible, confidence at or above the threshold | the matched T&C line |
 | `Check terms` (dashed grey) | eligible but confidence below the threshold | why, plus the confidence vs the threshold |
 | `No cash back` (grey) | excluded | the reason, quoted from the T&C |
-| `2% est.` / `~$x est.` (dashed green) | Nike's placeholder rate | "Rate not in supplied terms; placeholder value." |
+| `Checking` (dots) | the classifier is still answering | n/a |
 | nothing | unknown status, not yet evaluated, or extension off | n/a |
 
 Every tooltip ends with "Estimate. Final determination by merchant."
@@ -236,12 +236,12 @@ Items added to the cart before activation are flagged, and a banner warns "Items
 |---|---|---|---|
 | Rate rows | 78 (1% to 8%) | 3 (all 1.5%) | 0 |
 | Exclusions | 30 (some order-level) | 13 (some order-level) | 12 (some order-level) |
-| Default rate | 1% | 4% | 2% (placeholder) |
+| Default rate | 1% | 4% | 10% |
 | Specific rate can override an exclusion | yes | no | no |
 | Catalog size | 48 | 44 | 41 |
 | Messy-breadcrumb products | 6 | 6 | 6 |
 
-**Nike's placeholder rate:** the supplied T&C has no rate table. A 2% default is used and marked `assumed` (confidence 0.5), shown as an estimate with the tooltip "Rate not in supplied terms; placeholder value."
+**Nike's default rate:** 10% for all other eligible items, with the listed exclusions applied first. The placeholder mechanism (`assumed`) is still in the engine but unused.
 
 **Best Buy specifics:** the T&C contains a contradiction: "All Headphones (excluding Apple and Beats)" at 6% and "All Non-Apple Headphones" at 3%. Both are encoded as written, so a generic headphone is a tie and goes to the classifier. Rows like "Select Lenovo Laptops" are keyed on a made-up flag (`selectLenovo`), because the T&C does not say which laptops are "select".
 
