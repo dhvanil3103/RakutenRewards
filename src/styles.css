@@ -102,3 +102,19 @@ h1 { font-size: 1.6rem; margin: 0 0 .5rem; }
 
 .card { scroll-margin-top: 100px; }
 @media (min-width: 1100px) { .store.has-debug .store-main { padding-right: 332px; max-width: none; } }
+
+:focus-visible { outline: 2px solid #2b6fd6; outline-offset: 2px; }
+.badge:focus-visible { outline-offset: 3px; }
+.card { transition: border-color .15s; }
+@media (prefers-reduced-motion: reduce) { .card, .debug .bar div { transition: none; } }
+
+.badge-loading { background: #fff; color: #555; border: 1.5px solid var(--line); cursor: default; display: inline-flex; align-items: center; gap: .35rem; }
+.dots { display: inline-flex; gap: 3px; }
+.dots i { width: 5px; height: 5px; border-radius: 50%; background: #888; animation: blink 1s infinite ease-in-out; }
+.dots i:nth-child(2) { animation-delay: .15s; } .dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .dots i { animation: none; opacity: .6; } }
+
+.card-media a { text-decoration: none; }
+.hint { background: #eaf1ff; color: #14306b; border: 1px solid #c4d6fb; border-radius: 8px; padding: .6rem .8rem; margin-bottom: 1rem; font-size: .9rem; }
+.hint .link { color: inherit; font-weight: 600; }

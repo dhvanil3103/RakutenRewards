@@ -7,7 +7,7 @@ import type { MerchantId } from "../engine";
 
 export default function Listing() {
   const merchant = useParams().storeId as MerchantId;
-  const { setPageItems } = useExtension();
+  const { setPageItems, active, activate } = useExtension();
   const [q, setQ] = useState("");
   const [cat, setCat] = useState("All");
   const items = CATALOG[merchant];
@@ -25,6 +25,11 @@ export default function Listing() {
 
   return (
     <>
+      {!active && (
+        <div className="hint" role="note">
+          Cash back is off. <button className="link" onClick={activate}>Activate Cash Back</button> to see the rate on each product as you scroll.
+        </div>
+      )}
       <div className="filters">
         <input type="search" placeholder="Search products" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search products" />
         <div className="chips">

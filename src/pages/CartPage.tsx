@@ -79,7 +79,7 @@ export default function CartPage() {
                 <div className="price">{money(l.lineTotal)}</div>
                 {active && (
                   <>
-                    <Badge result={l.result} price={l.item.price} quantity={l.quantity} where="cart" />
+                    <Badge result={l.result} pending={l.result.reason === PENDING.reason} price={l.item.price} quantity={l.quantity} where="cart" />
                     {l.result.status === "eligible" && <div className="small">Cash back {money(l.cashBack)}</div>}
                   </>
                 )}

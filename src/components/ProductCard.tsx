@@ -15,7 +15,7 @@ export const tintFor = (s: string) => {
 export function ProductCard({ item }: { item: Item }) {
   const { add } = useCart();
   const { debug, active } = useExtension();
-  const { ref, result, evaluated } = useVisibleEvaluation<HTMLDivElement>(item);
+  const { ref, result, pending, evaluated } = useVisibleEvaluation<HTMLDivElement>(item);
   return (
     <article className={`card ${debug && active ? (evaluated ? "ev" : "not-ev") : ""}`}>
       <div className="card-media" ref={ref}>
@@ -23,7 +23,7 @@ export function ProductCard({ item }: { item: Item }) {
           <Tile brand={item.brand} tint={tintFor(item.brand)} />
         </Link>
         <div className="badge-slot">
-          <Badge result={result} price={item.price} where="listing" />
+          <Badge result={result} pending={pending} price={item.price} where="listing" />
         </div>
         {debug && active && <span className="ev-tag">{evaluated ? "evaluated" : "not evaluated"}</span>}
       </div>

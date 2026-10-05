@@ -12,7 +12,7 @@ export interface Classifier {
 export type Distribution = { id: string; p: number }[] & { via?: string };
 const tag = (d: { id: string; p: number }[], via: string): Distribution => Object.assign(d, { via });
 
-export type ClassifierKind = "mock" | "jev" | "llm";
+export type ClassifierKind = "mock" | "jev";
 
 const DEFAULT_BASE = 1.0; // prior for "use the merchant's default rate"
 const EXCLUDED_BASE = 0.5; // prior for "none of these / not eligible"
@@ -108,17 +108,7 @@ export class JevAdapter implements Classifier {
   }
 }
 
-/** Placeholder for a general LLM backend. TODO: implement a structured-output call; falls back to the mock. */
-export class LLMAdapter implements Classifier {
-  name = "LLM adapter (stub, falls back to mock)";
-  private fallback = new MockClassifier();
-  classify(item: Item, candidates: Candidate[]) {
-    return this.fallback.classify(item, candidates);
-  }
-}
-
 export function createClassifier(kind: ClassifierKind, opts: { jevApiKey?: string; jevProxyUrl?: string } = {}): Classifier {
   if (kind === "jev") return new JevAdapter({ apiKey: opts.jevApiKey, url: opts.jevProxyUrl, viaProxy: !!opts.jevProxyUrl });
-  if (kind === "llm") return new LLMAdapter();
   return new MockClassifier();
 }

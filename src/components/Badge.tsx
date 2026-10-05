@@ -11,8 +11,15 @@ export function effectiveMode(mode: DisplayMode, where: Where): "percent" | "dol
 const END = "Estimate. Final determination by merchant.";
 const money = (n: number) => `$${n.toFixed(2)}`;
 
-export function Badge({ result, price, quantity = 1, where }: { result?: ItemResult; price: number; quantity?: number; where: Where }) {
+export function Badge({ result, price, quantity = 1, where, pending }: { result?: ItemResult; price: number; quantity?: number; where: Where; pending?: boolean }) {
   const { active, mode, threshold } = useExtension();
+  if (active && pending && !result) {
+    return (
+      <span className="badge badge-loading" role="status" aria-label="Checking cash back">
+        <span className="dots" aria-hidden="true"><i /><i /><i /></span> Checking
+      </span>
+    );
+  }
   if (!active || !result || result.status === "unknown") return null;
 
   const shown = effectiveMode(mode, where);

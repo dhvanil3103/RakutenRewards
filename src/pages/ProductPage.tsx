@@ -20,13 +20,13 @@ export default function ProductPage() {
 }
 
 function Detail({ item, add, debug }: { item: NonNullable<ReturnType<typeof findItem>>; add: () => void; debug: boolean }) {
-  const { ref, result } = useVisibleEvaluation<HTMLDivElement>(item);
+  const { ref, result, pending } = useVisibleEvaluation<HTMLDivElement>(item);
   return (
     <div className="detail">
       <div className="detail-media" ref={ref}>
         <Tile brand={item.brand} tint={tintFor(item.brand)} big />
         <div className="badge-slot">
-          <Badge result={result} price={item.price} where="detail" />
+          <Badge result={result} pending={pending} price={item.price} where="detail" />
         </div>
       </div>
       <div>

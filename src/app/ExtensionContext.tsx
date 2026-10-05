@@ -28,7 +28,7 @@ export function ExtensionProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState(0);
   const [mode, setMode] = useState<DisplayMode>("auto");
   const [threshold, setThreshold] = useState(0.7);
-  const [backend, setBackend] = useState<ClassifierKind>("mock");
+  const [backend, setBackend] = useState<ClassifierKind>("jev");
   const [debug, setDebug] = useState(true);
   const [pageItems, setPageItems] = useState<Item[]>([]);
 

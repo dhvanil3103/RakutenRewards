@@ -32,7 +32,6 @@ export function ExtensionBar() {
         <select value={x.backend} onChange={(e) => x.setBackend(e.target.value as ClassifierKind)}>
           <option value="mock">Mock</option>
           <option value="jev">Jev adapter</option>
-          <option value="llm">LLM adapter</option>
         </select>
       </label>
       <label className="ext-group">

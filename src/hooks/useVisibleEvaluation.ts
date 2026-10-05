@@ -10,6 +10,7 @@ export function useVisibleEvaluation<T extends HTMLElement>(item: Item) {
   const { active, resolver } = useExtension();
   const ref = useRef<T | null>(null);
   const result = useSyncExternalStore(resolver.subscribe, () => resolver.get(item));
+  const pending = useSyncExternalStore(resolver.subscribe, () => resolver.has(item) && !resolver.get(item));
 
   useEffect(() => {
     const el = ref.current;
@@ -27,7 +28,7 @@ export function useVisibleEvaluation<T extends HTMLElement>(item: Item) {
     return () => io.disconnect();
   }, [active, resolver, item]);
 
-  return { ref, result: active ? result : undefined, evaluated: result !== undefined };
+  return { ref, result: active ? result : undefined, pending: active && pending, evaluated: result !== undefined };
 }
 
 export function useResolverStats() {

@@ -36,7 +36,6 @@ Choices made where the brief was ambiguous.
 - On any failure (no key, proxy missing, API error) it falls back to the mock, and the debug panel shows a warning.
 - The Jev question carries task instructions (decide from title and brand, since breadcrumb and flags are missing) and each option's description includes the T&C wording and what it means (earns X%, or earns no cash back). With bare labels Jev disagreed with the mock on 3 of 14 Nike leftovers (no flags set); with this context it agrees on all 14.
 - Only the `choice` primitive is used. I did not use the JS SDK (`@typesafe-ai/sdk`), `confidence`, Noul or Score.
-- The LLM adapter is a stub (TODO) that falls back to the mock.
 
 ## Other
 - No logos or real images: tiles are colored blocks with brand initials, derived from a hash of the brand.
