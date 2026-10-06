@@ -53,13 +53,20 @@ async function scan() {
   }
 }
 
+let mountedFor = "";
+
 async function product() {
   const settings = await loadSettings();
   if (!settings.enabled || !/\/product\//.test(location.pathname)) return;
+  const key = location.pathname;
+  const existing = document.querySelector("[data-cashback-badge='pdp']");
+  if (mountedFor === key && existing?.isConnected) return; // already showing for this product
+  existing?.remove();
   const item = productFromPage();
   const anchor = document.querySelector("h1");
   if (!item || !anchor?.parentElement) return;
-  const set = mountBadge(anchor.parentElement, "inline");
+  mountedFor = key; // set before awaiting so repeated page mutations cannot mount a second badge
+  const set = mountBadge(anchor.parentElement, "inline", "pdp");
   set({ kind: "loading" });
   const result = await resolver.resolve(item);
   set({ kind: "result", result, price: item.price, threshold: settings.threshold, note: `${NOTE} Read as: brand "${item.brand}", path "${item.breadcrumb.join(" > ") || "none"}".` });

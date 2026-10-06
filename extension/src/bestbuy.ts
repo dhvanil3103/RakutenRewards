@@ -71,20 +71,61 @@ export function pageBreadcrumb(doc: Document = document): string[] {
   return nav.filter((n) => n && !GENERIC_CRUMBS.has(n.toLowerCase()));
 }
 
+const PRODUCT_HREF = 'a[href*="/product/"], a[href*="skuId="]';
+
+/** SKU from a Best Buy product URL: ?skuId=123 or /product/<slug>/<code>. */
+function skuFromUrl(href: string): string {
+  try {
+    const u = new URL(href, location.href);
+    return u.searchParams.get("skuId") ?? u.pathname.split("/").filter(Boolean).pop() ?? "";
+  } catch {
+    return "";
+  }
+}
+
+function priceIn(el: Element): number {
+  const sr = text(el.querySelector('[data-testid="price-block-customer-price"] .sr-only')) || text(el.querySelector('[data-testid="price-block-customer-price"]'));
+  return parsePrice(sr || text(el)) ?? 0; // the rate does not depend on price, so a missing price must not hide the badge
+}
+
+/**
+ * Product cards anywhere on the site. Search results use a known card element; everything else (home page
+ * carousels, deal rows, recommendations) is found generically: the largest ancestor of a product link that
+ * still contains only that one product.
+ */
 export function cardsIn(root: ParentNode, crumbs: string[]): Card[] {
   const cards: Card[] = [];
-  root.querySelectorAll<HTMLElement>("li.product-list-item").forEach((el) => {
-    const sku = el.dataset.productId ?? el.getAttribute("data-testid") ?? "";
-    const link = el.querySelector<HTMLAnchorElement>("a.product-list-item-link[href]");
-    const title = text(el.querySelector("h3.product-title"));
-    const price = parsePrice(text(el.querySelector('[data-testid="price-block-customer-price"] .sr-only')) || text(el.querySelector('[data-testid="price-block-customer-price"]')));
-    if (!sku || !link || !title || price === null) return; // not a normal priced product card
-    const brand = brandOf(title, text(el.querySelector("h3.product-title span.first-title")));
+  const claimed = new Set<HTMLElement>();
+  const add = (el: HTMLElement, link: HTMLAnchorElement, title: string, brandField: string) => {
+    const sku = el.dataset.productId ?? skuFromUrl(link.href);
+    if (!sku || !title) return;
+    claimed.add(el);
     cards.push({
       el,
       url: link.href,
-      item: { id: sku, merchant: "bestbuy", title, brand, breadcrumb: crumbs, price, seller: "merchant", flags: [] },
+      item: { id: sku, merchant: "bestbuy", title, brand: brandOf(title, brandField), breadcrumb: crumbs, price: priceIn(el), seller: "merchant", flags: [] },
     });
+  };
+
+  root.querySelectorAll<HTMLElement>("li.product-list-item").forEach((el) => {
+    const link = el.querySelector<HTMLAnchorElement>("a.product-list-item-link[href]") ?? el.querySelector<HTMLAnchorElement>(PRODUCT_HREF);
+    const title = text(el.querySelector("h3.product-title")) || text(link);
+    if (link) add(el, link, title, text(el.querySelector("h3.product-title span.first-title")));
+  });
+
+  root.querySelectorAll<HTMLAnchorElement>(PRODUCT_HREF).forEach((link) => {
+    if (link.closest("[data-cashback-badge]") || [...claimed].some((c) => c.contains(link))) return;
+    const href = link.href.split("#")[0];
+    let card: HTMLElement | null = null;
+    for (let el = link.parentElement; el && el !== document.body; el = el.parentElement) {
+      const others = new Set([...el.querySelectorAll<HTMLAnchorElement>(PRODUCT_HREF)].map((a) => a.href.split("#")[0]));
+      if (others.size > 1) break; // reached a container holding several products
+      if (/\$\s?\d/.test(el.textContent ?? "") || el.querySelector("img")) card = el;
+    }
+    if (!card || claimed.has(card)) return;
+    const title = text(link) || link.getAttribute("aria-label") || card.querySelector("img")?.getAttribute("alt") || text(card.querySelector("h2, h3, h4"));
+    if (title && title.length > 3) add(card, link, title, "");
+    void href;
   });
   return cards;
 }

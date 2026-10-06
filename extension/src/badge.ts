@@ -18,9 +18,9 @@ const END = " Estimate. Final determination by merchant.";
 
 export type BadgeState = { kind: "loading" } | { kind: "result"; result: ItemResult; price: number; threshold: number; note?: string };
 
-export function mountBadge(parent: HTMLElement, mode: "absolute" | "inline"): (s: BadgeState) => void {
+export function mountBadge(parent: HTMLElement, mode: "absolute" | "inline", tag = "card"): (s: BadgeState) => void {
   const host = document.createElement("div");
-  host.setAttribute("data-cashback-badge", "");
+  host.setAttribute("data-cashback-badge", tag);
   host.style.cssText = mode === "absolute" ? "position:absolute;top:8px;right:8px;z-index:5;" : "display:inline-block;margin:8px 0;";
   const root = host.attachShadow({ mode: "open" });
   const style = document.createElement("style");
