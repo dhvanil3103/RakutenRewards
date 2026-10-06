@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Cash Back Overlay (Best Buy prototype)",
+  "version": "0.1.0",
+  "description": "Shows an estimated cash back rate on Best Buy products, read from the merchant's Terms & Conditions.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.bestbuy.com/*", "http://localhost:5173/*", "https://*.vercel.app/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    { "matches": ["https://www.bestbuy.com/*"], "js": ["content.js"], "run_at": "document_idle" }
+  ],
+  "action": { "default_popup": "popup.html", "default_title": "Cash Back Overlay" }
+}
