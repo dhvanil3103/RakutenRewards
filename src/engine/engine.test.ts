@@ -163,3 +163,18 @@ describe("resolver cost control", () => {
     expect((await r.resolve(findItem("bestbuy", "bb-ninja-airfryer")!)).tier).toBe("rule");
   });
 });
+
+describe("title cross-check", () => {
+  const sony = (over: Partial<Item>): Item => ({
+    id: "x", merchant: "bestbuy", title: "New! - Sony - WH-CH530 Wireless Headphone with Microphone - Black", brand: "Sony",
+    breadcrumb: ["Audio", "Headphones", "On-Ear Headphones"], price: 59.99, seller: "merchant", flags: [], ...over,
+  });
+  it("trusts the rules when brand and title agree", () => {
+    expect(evaluateRules(sony({}), RULES.bestbuy).needsClassifier).toBeNull();
+  });
+  it("asks the classifier when the merchant brand field is wrong but the title says Sony headphones", () => {
+    const out = evaluateRules(sony({ brand: "New!" }), RULES.bestbuy);
+    expect(["tie", "disagreement"]).toContain(out.needsClassifier?.reason);
+    expect(out.needsClassifier?.candidates.map((c) => c.id)).toContain("7-5-sony-headphones");
+  });
+});

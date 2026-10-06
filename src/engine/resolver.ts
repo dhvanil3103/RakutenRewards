@@ -37,6 +37,7 @@ export class Resolver {
   constructor(
     private rules: Record<MerchantId, MerchantRules>,
     private classifier: Classifier,
+    private signatureOf: (item: Item) => string = signature,
   ) {
     this.statsSnap = this.computeStats();
   }
@@ -98,7 +99,7 @@ export class Resolver {
       return Promise.resolve(result);
     }
 
-    const sig = signature(item);
+    const sig = this.signatureOf(item);
     const cached = this.cache.get(sig);
     if (cached) {
       this.counters.cacheHits++;
@@ -114,7 +115,8 @@ export class Resolver {
       .classify(item, needsClassifier.candidates)
       .then((dist) => {
         const best = [...dist].sort((a, b) => b.p - a.p)[0];
-        this.cache.set(sig, best);
+        // An answer from the fallback mock must not be reused once the real classifier is back.
+        if (!(dist.via ?? "").startsWith("mock (")) this.cache.set(sig, best);
         this.counters.classifierResolved++;
         const r = applyChoice(item, rules, best.id, best.p);
         this.inflight.delete(key);

@@ -6,6 +6,8 @@ import { DEFAULT_ID, EXCLUDED_ID, type Candidate, type ItemResult, type RuleOutc
 export const round2 = (x: number) => Math.round((x + Number.EPSILON) * 100) / 100;
 export const amountFor = (price: number, qty: number, rate: number) => round2((price * qty * rate) / 100);
 
+// A rule match is distrusted when the item's own text fits another row this much better.
+const DISAGREE_MARGIN = 1.5;
 const CONFLICT_CAP = 0.6;
 const TIE_CAP = 0.6;
 
@@ -123,8 +125,23 @@ export function evaluateRules(item: Item, rules: MerchantRules, quantity = 1): R
   if (conflict && row && ex) {
     return { result, needsClassifier: { reason: "conflict", candidates: [...topRows.map((x) => x.r), ex.e, ...tail] } };
   }
+  // Structured fields (brand, breadcrumb) can be wrong on the merchant's side. Rows whose wording fits the item's own
+  // title and brand clearly better than the matched row are offered to the classifier too, so a bad field cannot hide them.
+  const better: Candidate[] =
+    row && !ex && result.status === "eligible" && !row.r.match.flagsAll && !row.r.match.seller
+      ? [...rules.rateRows, ...rules.exclusions.filter((e) => e.scope === "item")]
+          .filter((c) => !topRows.some((x) => x.r.id === c.id))
+          .map((c) => ({ c, s: overlapScore(item, c) }))
+          .filter((x) => x.s >= Math.max(...topRows.map((t) => overlapScore(item, t.r))) + DISAGREE_MARGIN)
+          .sort((a, b) => b.s - a.s)
+          .slice(0, 4)
+          .map((x) => x.c)
+      : [];
   if (tied && !ex) {
-    return { result, needsClassifier: { reason: "tie", candidates: [...topRows.map((x) => x.r), excludedCandidate()] } };
+    return { result, needsClassifier: { reason: "tie", candidates: [...topRows.map((x) => x.r), ...better, excludedCandidate()] } };
+  }
+  if (better.length > 0 && row) {
+    return { result, needsClassifier: { reason: "disagreement", candidates: [row.r, ...better, ...tail] } };
   }
   if (result.status === "unknown") {
     const pool: Candidate[] = [...rules.rateRows, ...rules.exclusions.filter((e) => e.scope === "item")];
