@@ -1,8 +1,7 @@
 import { build } from "esbuild";
-import { cpSync, mkdirSync, rmSync } from "node:fs";
+import { cpSync, mkdirSync } from "node:fs";
 
-rmSync("dist", { recursive: true, force: true });
-mkdirSync("dist");
+mkdirSync("dist", { recursive: true }); // overwrite in place: deleting dist can make Chrome fail to fetch scripts mid-rebuild
 await build({
   entryPoints: { content: "src/content.ts", background: "src/background.ts", popup: "src/popup.ts" },
   outdir: "dist",
